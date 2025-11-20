@@ -36,7 +36,7 @@ header nav ul li a {
 
 /* マウスを乗せたときの色 */
 header nav ul li a:hover {
-    color: #6eeb90; 
+    color: #fc63a0f6; 
 }
 
 /* メインコンテンツ */
@@ -74,6 +74,35 @@ main {
     letter-spacing: 0.2em; /* 文字間隔 */
 }
 
+/* aboutセクション */
+
+.about {
+    /* レイアウト設定 */
+    display: flex;
+    flex-direction: column; /* 子要素（h1とp）を縦に並べる */
+    justify-content: center; /* 垂直方向の中央揃え */
+    align-items: center; /* 水平方向の中央揃え */
+
+    background-color: #ffffff; /* 背景；白 */
+    color: #333; /* 文字；黒 */
+
+    /* テキストのスタイル */
+    text-align: center;
+}
+
+.about h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3.6rem; /* フォントサイズ */
+    margin: 0;
+    letter-spacing: 0.1em; /* 文字と文字の間隔 */
+    text-align: center;
+    margin-bottom: 20px; /* 見出しの下の余白 */
+    padding-bottom: 5px; /* 文字と下線の間のスペース */
+    border-bottom: 2px solid #fc63a0f6; /* 下線 */
+    display: inline-block;
+    
+}
+
 /*　セクションの共通 */
 section {
     padding: 60px 20px; /* 上下、左右 */
@@ -81,8 +110,11 @@ section {
 
 section h2 {
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 40px; /* 見出しの下に余白 */
+    font-size: 3.7rem;
+    margin-bottom: 20px; /* 見出しの下の余白 */
+    padding-bottom: 5px; /* 文字と下線の間のスペース */
+    border-bottom: 2px solid #fc63a0f6; /* 下線 */
+    display: inline-block; 
 }
 
 section h3 {
