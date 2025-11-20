@@ -89,6 +89,63 @@ main {
     letter-spacing: 0.2em; /* 文字間隔 */
 }
 
+/* ==============================
+   ヒーローセクションの飾り付けの魔法
+   ============================== */
+
+.hero {
+    position: relative; /* 図形を絶対配置するための基準にするにゃ */
+    overflow: hidden;   /* 画面からはみ出した図形を隠すにゃ */
+}
+
+.shape {
+    position: absolute;
+    opacity: 0.3; /* 少しだけ透明にして、ふんわりした感じに */
+    animation: float 8s ease-in-out infinite; /* 8秒かけてふわふわ浮き沈みするアニメーションを無限に繰り返すにゃ */
+}
+
+/* 正方形 */
+.shape-square {
+    background-color: #fc63a0f6; /* ピンク色 */
+}
+
+/* 正三角形 */
+.shape-triangle {
+    width: 0;
+    height: 0;
+    /* borderを使って三角形を作る魔法ですにゃ */
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 70px solid #63d6fcf6; /* 水色 */
+}
+
+/* ひし形（正方形を45度回転させるにゃ） */
+.shape-rhombus {
+    background-color: #ff9d3bf4; /* オレンジ色 */
+    transform: rotate(45deg);
+}
+
+/* 図形たちの大きさと位置を個別に設定するにゃ */
+.shape-1 { width: 80px; height: 80px; top: 15%; left: 10%; animation-delay: -2s; }
+.shape-2 { top: 20%; right: 15%; animation-delay: -4s; }
+.shape-3 { width: 100px; height: 100px; top: 70%; left: 20%; animation-delay: -1s; }
+.shape-4 { width: 40px; height: 40px; top: 75%; right: 25%; animation-delay: -5s; }
+.shape-5 { top: 40%; left: 30%; animation-delay: -3s; transform: scale(0.8) rotate(180deg); }
+
+/* ふわふわさせるアニメーション本体ですにゃ */
+@keyframes float {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(15deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+
 /* aboutセクション */
 
 #about {
