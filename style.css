@@ -123,6 +123,8 @@ main {
     text-align: left; /* テキストを左揃えにする */
     max-width: 500px; /* p要素の最大幅を指定 */
     width: 100%; /* 親要素の幅いっぱいに広がるようにする */
+    margin-left: auto; /* 左側の余白を自動で最大にして、要素を右に寄せる */
+    margin-right: 10%; /* 右側の余白をにする */
 }
 
 /* Worksセクション */
