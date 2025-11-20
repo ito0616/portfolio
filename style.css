@@ -155,12 +155,15 @@ main {
     display: flex; /* アイコンとテキストを横並びに */
     align-items: center; /* 上下中央に揃えるにゃ */
     gap: 20px; /* アイコンとテキストの間のスペース */
-    max-width: 400px; /* アイテムの最大幅 */
+    max-width: 450px; /* アイテムの最大幅を少し広げるにゃ */
+    width: 100%;
 }
 
 .skill-icon {
-    font-size: 4rem; /* アイコンの大きさにゃ */
-    color: #fc63a0f6; /* アイコンの色をアクセントカラーに */
+    width: 80px;  /* アイコン画像の幅を揃えるにゃ */
+    height: 80px; /* アイコン画像の高さを揃えるにゃ */
+    object-fit: contain; /* 画像の比率を保ったまま収めるにゃ */
+    flex-shrink: 0; /* アイコンが縮まないようにする魔法ですにゃ */
 }
 
 .skill-text {
