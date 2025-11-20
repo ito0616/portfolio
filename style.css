@@ -109,6 +109,7 @@ main {
     letter-spacing: 0.1em; 
     line-height: 1.8; 
     text-align: left; /* テキストを左揃えにする */
+    padding-left: 700px; /* 左側に30pxの余白を追加して、開始位置をずらす */
 }
 
 /* ===============
