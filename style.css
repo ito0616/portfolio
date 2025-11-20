@@ -20,6 +20,14 @@ header {
     position: sticky; /* スクロールすると上部にくっつく */
     top: 0; /* 上部にくっつくための指定 */
     z-index: 100;
+    background-color: transparent; /* 初期状態では背景を透明に */
+    transition: background-color 0.3s, box-shadow 0.3s; /* 背景と影の変化を滑らかに */
+}
+
+/* スクロールされたときのヘッダーのスタイル */
+header.scrolled {
+    background-color: rgba(255, 255, 255, 0.9); /* 少しだけ透ける白 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 影を追加 */
 }
 
 header nav ul {
