@@ -1,8 +1,14 @@
+/* サイト全体の基本設定 */
+body {
+    font-family: 'Noto Sans JP', sans-serif; /* Google Fontsで指定したフォント */
+    color: #333; /* 基本の文字色 */
+}
+
 /*ヘッダー*/
 header {
     width: 100%; /* 画面のはば */
-    background-color: #fff; /* 背景；白 */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 影 */
+    /*background-color: #fff; /* 背景；白 */
+    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 影 */
     position: fixed; /* 画面上部に固定 */
     top: 0;
     left: 0;
@@ -22,10 +28,10 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #333; /* 文字色を濃いグレーに */
-    text-decoration: none; /* 下線を消す */
-    font-weight: bold; /* 文字を太くする */
-    transition: color 0.3s; /* ホバー時の色変化を滑らかに */
+    color: #3b3b3b; /* 文字 */
+    text-decoration: none; /* 下線;消す */
+    font-weight: bold; /* 文字;太くする */
+    transition: color 0.3s; /* 色変化 */
 }
 
 /* マウスを乗せたときの色 */
@@ -56,14 +62,31 @@ main {
 }
 
 .hero h1 {
-    font-size: 4rem; /* フォントサイズ */
+    font-family: 'Roboto', sans-serif;
+    font-size: 5rem; /* フォントサイズ */
     margin: 0;
     letter-spacing: 0.1em; /* 文字と文字の間隔 */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字に影を */
 }
 
 .hero p {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-top: 1rem;
     letter-spacing: 0.2em; /* 文字間隔 */
+}
+
+/*　セクションの共通 */
+section {
+    padding: 60px 20px; /* 上下、左右 */
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px; /* 見出しの下に余白 */
+}
+
+section h3 {
+    font-size: 1.5rem;
+    margin-top: 30px; /* 各項目の見出しの上に余白 */
+    margin-bottom: 10px; /* 各項目の見出しの下に余白 */
 }
