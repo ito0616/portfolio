@@ -1,18 +1,100 @@
-<html>
+<!DOCTYPE html>
+<html lang="ja">
     <head>
-        <meta charset="UTF-8">
-        <title> itoのportfolio </title>
+        <meta charset="UTf-8">
+        <title> Ito's portfolio </title>
+        <meta name="description" content="Itoのポートフォリオサイトです。これまでの制作実績やスキルについて紹介しています。">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1> 伊藤のポーフォリオ </h1>
-        <p> おためし </p>
-        <ol>
-            <li>
-                <h3> 自己紹介 </h3>
-                <p> 僕の名前は伊藤陽義です。2008年生まれで現在17歳です。</p>
-                <p> 大阪公立大学工業高等専門学校|総合工学システム学科|知能情報コースの2年生です。</p>
-                <p> 僕が作成した作品を紹介します。 </p>
-            </li>
-        </ol>
-    </body>    
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#carrer">Carrer</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#works">Works</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div 
+            <section id="about">
+                <h2>about me</h2><br>
+                <p>
+                    name    伊藤陽義(Ito Haruyoshi)<br>
+                    birthday 6/16<br>
+                    hobby 映画、漫画、アニメ鑑賞<br>
+                    大阪公立大学工業高等専門学校|総合工学システム学科|情報知能コース|2年
+                </p>
+            </section>
+
+        <section id="carrer">
+            <h2>carrer</h2>
+            <p>
+                <h3>小学生</h3><br>
+                小学校の文化祭的な行事でmicro:bitに出会い、プログラミングに興味を持つ。<br>
+                <h3>中学３年</h3><br>
+                高専について知り、興味を持ち。入学したいと思う。<br>
+                <h3>中学３年２月</h3><br>
+                高専に合格。入学が決まる。<br>
+                <h3></h3><br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </p>
+        </section>
+
+            <section id="skills">
+                <h2>skill</h2><br>
+                    <h3>プログラミング言語</h3><br>
+                    ・JavaScript　・HTML&CSS<br>
+                    ・python言語　・Arduino言語<br>
+                    <h3>使用ソフトウェア</h3><br>
+                    ・Git/GitHub　・VSCode　・Deeds-DCS<br>
+                    ・TeraTerm ・Wireshark</p>
+            </section>
+
+            <section id="works">
+                <h2>制作物</h2>
+                <div class="originalgame">
+                    <h3>相性対決ゲーム</h3>
+                    <p>
+                        プログラミングの課題で作りました。<br>
+                        <strong>[ゲームの内容]</strong><br>
+                            武器によって相性があり、相性がいい方が勝負に勝てるゲームになっていて、<br>
+                            シンプルに言えばじゃんけんです。しかし、<b>ただのじゃんけんではありません！</b><br>
+                            自分は「アイテム」を装備することができ、それぞれの装備によって「効果」があります。<br>
+                            それだけだと自分だけ強すぎるので、相手(コンピュータ)にはどの武器にも勝てる「最強の技」を持っています。<br>
+                            一応、わくわく感を出すためにアイテムを手に入れるためには「ガチャ」を作りました。<br>
+                            <a href="https://colab.research.google.com/drive/1_qRiPYlAdRVM9329YamvUskhfxNZkUnA?usp=sharing">オリジナルゲームのURLへ飛べます </a><br>
+                        <img src="orisample1.png" width="500px" align="middle">説明<br>
+                        <img src="orisample2.png" height="200px" align="middle">対戦中の画面<br>
+                        <img src="orisample3.png" height="200px" align="middle">持ち物を確認する画面<br>
+                    </p>
+                </div>
+                <div class="noberugame">
+                    <h3> ノベルゲーム </h3>
+                    <p>
+                        高専祭の展示物として作りました。<br>
+                        担当はプログラミング、シナリオ、チュートリアル<br>
+                        素敵なイラストなどはお借りしました。<br>
+                        ゲーム名：呪いのwebサイト<br>
+                        URL:
+                        <a href="https://ito0616.github.io/horror-website/tyranoprojects/">ノベルゲームのURLへ飛べます </a><br>
+                        <img src="nosample1.png" width="480px" align="middle">タイトル画面<br>
+                        <img src="nosample2.png" width="480px" align="middle">実際のゲーム画面<br>
+                        <img src="nosample3.png" width="480px" align="middle">選択肢<br>
+                    </p>
+                </div>    
+            </section>
+        </main>
+
+        <script src="script.js"></script>
+</body>
 </html>

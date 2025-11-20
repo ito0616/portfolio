@@ -1,0 +1,40 @@
+/*ヘッダー*/
+header {
+    width: 100%; /* 幅を画面いっぱいに */
+    background-color: #fff; /* 背景色を白に */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* ちょっとした影で立体感を */
+    position: fixed; /* 画面上部に固定 */
+    top: 0;
+    left: 0;
+    z-index: 100; 
+}
+
+header nav ul {
+    display: flex; /* ★これを指定すると、子要素(li)が横並びになります */
+    justify-content: center; /* 中央揃えにする */
+    list-style: none; /* ・の黒点を消す */
+    margin: 0;
+    padding: 15px 0; /* 上下の余白 */
+}
+
+header nav ul li {
+    margin: 0 20px; /* 各メニュー項目の左右に余白を設ける */
+}
+
+header nav ul li a {
+    color: #333; /* 文字色を濃いグレーに */
+    text-decoration: none; /* 下線を消す */
+    font-weight: bold; /* 文字を太くする */
+    transition: color 0.3s; /* ホバー時の色変化を滑らかに */
+}
+
+/* マウスを乗せたときの色を変える */
+header nav ul li a:hover {
+    color: #007bff; /* 青色に変化 */
+}
+
+/* メインコンテンツ */
+/* コンテンツの開始位置下げる */
+main {
+    padding-top: 80px; /* ヘッダーの高さに合わせて調整 */
+}
