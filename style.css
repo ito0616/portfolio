@@ -458,7 +458,7 @@ footer nav ul li a {
 
 .timeline-content {
     padding: 20px 30px;
-    background-color: #e1ffe1; /* お手本みたいな深緑色 */
+    background-color: #ff9d3bf4; /* お手本みたいな深緑色 */
     color: white;
     border-radius: 8px;
     position: relative;
@@ -485,7 +485,7 @@ footer nav ul li a {
 .timeline-item:nth-child(even) .timeline-content::before {
     left: -15px; /* 箱の左側に配置 */
     border-width: 10px 15px 10px 0;
-    border-color: transparent #9df049db transparent transparent; /* 箱と同じ色にする */
+    border-color: transparent #ff9d3bf4 transparent transparent; /* 箱と同じ色にする */
 }
 
 .timeline-date {
