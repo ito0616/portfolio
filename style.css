@@ -115,6 +115,20 @@ main {
 /* ===============
 Worksセクション
 ================ */
+#works h2{
+        font-family: 'Roboto', sans-serif;
+    font-size: 3.6rem; /* フォントサイズ */
+    margin: 0;
+    letter-spacing: 0.1em; /* 文字と文字の間隔 */
+    text-align: center;
+    margin-bottom: 40px; /* 見出しの下の余白 */
+    padding-bottom: 5px; /* 文字と下線の間のスペース */
+    border-bottom: 4px solid #fc63a0f6; /* 下線 */
+    display: inline-block;
+    text-align: center; /* 中央揃え */
+}
+
+
 #works h3 {
     font-size: 1.8rem;
     margin-top: 40px;
