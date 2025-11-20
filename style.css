@@ -127,6 +127,50 @@ main {
     margin-right: 5%; /* 右側の余白をにする */
 }
 
+/* Skillsセクション */
+#skills {
+    background-color: #f9f9f9; /* 背景色を少し変えるにゃ */
+    text-align: center;
+    padding: 80px 20px;
+}
+
+#skills h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3.6rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 60px; /* コンテンツとの余白を多めに取るにゃ */
+    padding-bottom: 5px;
+    border-bottom: 5px solid #fc63a0f6;
+    display: inline-block;
+}
+
+.skills-container {
+    display: flex; /* Flexboxで横並びにするにゃん！ */
+    justify-content: center; /* 中央に配置 */
+    gap: 40px; /* アイテム間のスペース */
+    flex-wrap: wrap; /* スマホでは折り返すようにするにゃ */
+}
+
+.skill-item {
+    display: flex; /* アイコンとテキストを横並びに */
+    align-items: center; /* 上下中央に揃えるにゃ */
+    gap: 20px; /* アイコンとテキストの間のスペース */
+    max-width: 400px; /* アイテムの最大幅 */
+}
+
+.skill-icon {
+    font-size: 4rem; /* アイコンの大きさにゃ */
+    color: #fc63a0f6; /* アイコンの色をアクセントカラーに */
+}
+
+.skill-text {
+    text-align: left; /* 説明文は左揃えの方が見やすいにゃ */
+}
+
+.skill-text h3 {
+    margin: 0 0 5px 0; /* 見出しの余白を調整 */
+}
+
 /* Worksセクション */
 #works {
     text-align: center; /* このセクションの中身をすべて中央揃えにする */
