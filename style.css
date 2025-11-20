@@ -88,6 +88,7 @@ main {
 
     /* テキストのスタイル */
     text-align: center;
+    padding: 80px 20px; /* 上下の余白を80px、左右の余白を20pxに */
 }
 
 #about h2 {
@@ -112,22 +113,20 @@ main {
     padding-left: 540px; /* 開始位置 */
 }
 
-/* ===============
-Worksセクション
-================ */
-#works h2{
-        font-family: 'Roboto', sans-serif;
+/* Worksセクション */
+#works {
+    text-align: center; /* このセクションの中身をすべて中央揃えにする */
+    padding: 80px 20px; /* 上下の余白を80px、左右の余白を20pxに */
+}
+
+#works h2 {
+    font-family: 'Roboto', sans-serif;
     font-size: 3.6rem; /* フォントサイズ */
-    margin: 0;
     letter-spacing: 0.1em; /* 文字と文字の間隔 */
-    text-align: center;
     margin-bottom: 40px; /* 見出しの下の余白 */
     padding-bottom: 5px; /* 文字と下線の間のスペース */
     border-bottom: 4px solid #fc63a0f6; /* 下線 */
     display: inline-block;
-    text-align: center; /* 中央揃え */
-    justify-content: center; /* 垂直方向の中央揃え */
-    align-items: center; /* 水平方向の中央揃え */
 }
 
 
@@ -182,18 +181,15 @@ Worksセクション
 }
 
 /* 詳細ページのスタイル */
-.work-detail {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px 20px;
+.work-detail header {
+    text-align: center;
+    padding-top: 50px; /* ページ上部からの余白 */
 }
 
-.work-detail header h1{
-    text-align: center;
+.work-detail header h1 {
     margin-bottom: 40px;
     border-bottom: 5px solid #79bafff6;
     display: inline-block;
-    text-align: center;
     padding-bottom: 20px;
 }
 
