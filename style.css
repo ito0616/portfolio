@@ -103,6 +103,13 @@ main {
     
 }
 
+.about p {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    letter-spacing: 0.2em; 
+}
+    
+
 /*　セクションの共通 */
 section {
     padding: 60px 20px; /* 上下、左右 */
