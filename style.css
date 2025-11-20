@@ -14,13 +14,6 @@ body {
     min-height: 100vh; /* ページの最小の高さを画面の高さに */
 }
 
-.rubik-scribble-regular {
-  font-family: "Rubik Scribble", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-
-
 /*ヘッダー*/
 header {
     grid-area: header; /* headerエリアに配置 */
@@ -84,7 +77,6 @@ main {
 }
 
 .hero h1 {
-    font-family: 'Roboto', sans-serif;
     font-size: 5rem; /* フォントサイズ */
     margin: 0;
     letter-spacing: 0.1em; /* 文字間隔 */
@@ -132,19 +124,12 @@ main {
     transform: rotate(45deg);
 }
 
-/* 丸ですにゃ */
-.shape-circle {
-    background-color: #f6fc63; /* 黄色 */
-    border-radius: 50%;
-}
-
 /* 図形たちの大きさと位置を個別に設定するにゃ */
 .shape-1 { width: 80px; height: 80px; top: 15%; left: 10%; animation-delay: -2s; }
 .shape-2 { top: 20%; right: 15%; animation-delay: -4s; }
 .shape-3 { width: 100px; height: 100px; top: 70%; left: 20%; animation-delay: -1s; }
 .shape-4 { width: 40px; height: 40px; top: 75%; right: 25%; animation-delay: -5s; }
 .shape-5 { top: 40%; left: 30%; animation-delay: -3s; transform: scale(0.8) rotate(180deg); }
-
 
 /* ふわふわさせるアニメーション本体ですにゃ */
 @keyframes float {
@@ -159,13 +144,6 @@ main {
     }
 }
 
-/* 各セクションの見出し(h2)のフォントを変更する魔法ですにゃ */
-#about h2,
-#works h2,
-#career h2,
-#skills h2 {
-    font-family: "Rubik Scribble", system-ui;
-}
 
 /* aboutセクション */
 
@@ -185,6 +163,7 @@ main {
 }
 
 #about h2 {
+    font-family: 'Tinos', serif;
     font-size: 3.6rem;
     letter-spacing: 0.1em; /* 文字と文字の間隔 */
     margin-bottom: 20px; /* p要素との間の余白を調整 */
@@ -226,6 +205,7 @@ main {
 }
 
 #skills h2 {
+    font-family: 'Tinos', serif;
     font-size: 3.6rem;
     letter-spacing: 0.1em;
     margin-bottom: 60px; /* コンテンツとの余白を多めに取る */
@@ -286,6 +266,7 @@ main {
 }
 
 #works h2 {
+    font-family: 'Tinos', serif;
     font-size: 3.6rem; /* フォントサイズ */
     letter-spacing: 0.1em; /* 文字と文字の間隔 */
     margin-bottom: 40px; /* 見出しの下の余白 */
@@ -339,6 +320,7 @@ main {
 }
 
 .work-detail h1 {
+    font-family: 'Tinos', serif;
     font-size: 3.6rem;
     letter-spacing: 0.1em;
     margin-bottom: 40px;
@@ -438,7 +420,6 @@ footer nav ul li a {
     /* 見出しの文字を少し小さくする */
     .hero h1, #about h2, #works h2 {
         font-size: 2.5rem;
-        font-family: "Rubik Scribble", system-ui;
     }
 
     /* 制作物一覧を縦積みにする */
@@ -459,6 +440,7 @@ footer nav ul li a {
 }
 
 #career h2 {
+    font-family: 'Tinos', serif;
     font-size: 3.6rem;
     letter-spacing: 0.1em;
     margin-bottom: 80px; /* 年表との余白をたっぷりとる */
