@@ -193,7 +193,7 @@ main {
     padding: 0 20px;  /* 画面が狭いときのために左右に少し余白を持たせる */
 }
 
-.work-detail header h1 {
+.work-detail h1 {
     margin-bottom: 40px;
     border-bottom: 5px solid #79bafff6;
     display: inline-block;
