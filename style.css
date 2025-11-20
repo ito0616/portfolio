@@ -211,23 +211,45 @@ main {
     border-bottom: 5px solid #79bafff6;
     display: inline-block;
     padding-bottom: 5px;
-    font-size: 5rem;
+    font-size: 4rem;
     letter-spacing: 0.1em;
     text-align: center;
 }
 
 .work-detail h2 {
-    font-size: 1.8rem;
+    font-size: 2.4rem;
     margin-top: 30px;
     margin-bottom: 15px;
     border-left: 5px solid #fc63a0f6; /* 左側に線を引くデザインに変更 */
-    padding-left: 10px; /* 線と文字の間の余白 */
+    padding-left: 0px; /* 線と文字の間の余白をなくして、左に寄せるにゃ */
 }
 
 .work-detail p {
     text-align: left; /* 左揃えの方が見やすい */
     line-height: 1.9;
-    padding-left: 20px; /* 左側に20pxの余白を追加して、開始位置をずらすにゃ */
+    padding-left: 0px; /* 左側の余白をなくして、左に寄せるにゃ */
+}
+
+.work-detail .work-images {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* 画像と画像の間のスペースにゃ */
+    flex-wrap: wrap; /* 画面が狭くなったら折り返すにゃ */
+}
+
+.work-detail .work-images figure {
+    margin: 0;
+    flex: 1; /* 空きスペースを均等に分け合う魔法ですにゃ */
+    min-width: 200px; /* 最小幅を指定して、小さくなりすぎないようにするにゃ */
+}
+
+.work-detail .work-images img {
+    width: 100%; /* 親要素(figure)の幅いっぱいに広がるにゃ */
+    height: auto; /* 高さは自動で調整するにゃ */
+    object-fit: contain; /* アスペクト比を保ったまま、全体が収まるようにするにゃ */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9; /* 画像の背景を少し色付けするにゃ */
 }
 
 .back-link {
