@@ -464,6 +464,30 @@ footer nav ul li a {
     position: relative;
 }
 
+/* 吹き出しの矢印部分を作る魔法ですにゃ */
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 20px; /* 矢印の上下の位置を調整 */
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+/* 左側の箱（奇数番目）の矢印を右向きに */
+.timeline-item:nth-child(odd) .timeline-content::before {
+    right: -15px; /* 箱の右側に配置 */
+    border-width: 10px 0 10px 15px;
+    border-color: transparent transparent transparent #9df049db; /* 箱と同じ色にするにゃ */
+}
+
+/* 右側の箱（偶数番目）の矢印を左向きに */
+.timeline-item:nth-child(even) .timeline-content::before {
+    left: -15px; /* 箱の左側に配置 */
+    border-width: 10px 15px 10px 0;
+    border-color: transparent #9df049db transparent transparent; /* 箱と同じ色にするにゃ */
+}
+
 .timeline-date {
     font-size: 1.2rem;
     font-weight: bold;
