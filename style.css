@@ -378,7 +378,7 @@ footer nav ul li a {
    ============================== */
 
 #career {
-    background-color: #e1ffe1; /* 少し落ち着いた背景色にゃ */
+    background-color: #fff; /* 少し落ち着いた背景色 */
     padding: 80px 20px;
     text-align: center;
 }
@@ -387,7 +387,7 @@ footer nav ul li a {
     font-family: 'Roboto', sans-serif;
     font-size: 3.6rem;
     letter-spacing: 0.1em;
-    margin-bottom: 80px; /* 年表との余白をたっぷりとるにゃ */
+    margin-bottom: 80px; /* 年表との余白をたっぷりとる */
     padding-bottom: 5px;
     border-bottom: 4px solid #fc63a0f6;
     display: inline-block;
@@ -401,7 +401,7 @@ footer nav ul li a {
     margin: 0 auto;
 }
 
-/* 中央の縦線ですにゃん */
+/* 中央の縦線 */
 .timeline::before {
     content: '';
     position: absolute;
@@ -433,7 +433,7 @@ footer nav ul li a {
     text-align: left;
 }
 
-/* 丸いポッチですにゃん */
+/* 丸いポッチ */
 .timeline-item::after {
     content: '';
     position: absolute;
@@ -448,23 +448,23 @@ footer nav ul li a {
 
 .timeline-item:nth-child(odd)::after {
     right: 0;
-    transform: translateX(50%); /* 自分の幅の半分だけ右に動かすにゃ */
+    transform: translateX(50%); /* 自分の幅の半分だけ右に動かす */
 }
 
 .timeline-item:nth-child(even)::after {
     left: 0;
-    transform: translateX(-50%); /* 自分の幅の半分だけ左に動かすにゃ */
+    transform: translateX(-50%); /* 自分の幅の半分だけ左に動かす */
 }
 
 .timeline-content {
     padding: 20px 30px;
-    background-color: #9df049db; /* お手本みたいな深緑色ですにゃ */
+    background-color: #e1ffe1; /* お手本みたいな深緑色 */
     color: white;
     border-radius: 8px;
     position: relative;
 }
 
-/* 吹き出しの矢印部分を作る魔法ですにゃ */
+/* 吹き出しの矢印部分を作る */
 .timeline-content::before {
     content: '';
     position: absolute;
@@ -478,14 +478,14 @@ footer nav ul li a {
 .timeline-item:nth-child(odd) .timeline-content::before {
     right: -15px; /* 箱の右側に配置 */
     border-width: 10px 0 10px 15px;
-    border-color: transparent transparent transparent #9df049db; /* 箱と同じ色にするにゃ */
+    border-color: transparent transparent transparent #9df049db; /* 箱と同じ色にする */
 }
 
 /* 右側の箱（偶数番目）の矢印を左向きに */
 .timeline-item:nth-child(even) .timeline-content::before {
     left: -15px; /* 箱の左側に配置 */
     border-width: 10px 15px 10px 0;
-    border-color: transparent #9df049db transparent transparent; /* 箱と同じ色にするにゃ */
+    border-color: transparent #9df049db transparent transparent; /* 箱と同じ色にする */
 }
 
 .timeline-date {
