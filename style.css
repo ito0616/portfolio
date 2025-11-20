@@ -76,7 +76,7 @@ main {
 
 /* aboutセクション */
 
-.about {
+#about {
     /* レイアウト設定 */
     display: flex;
     flex-direction: column; /* 子要素（h1とp）を縦に並べる */
@@ -90,20 +90,20 @@ main {
     text-align: center;
 }
 
-.about h2 {
+#about h2 {
     font-family: 'Roboto', sans-serif;
     font-size: 3.6rem; /* フォントサイズ */
     margin: 0;
     letter-spacing: 0.1em; /* 文字と文字の間隔 */
     text-align: center;
-    margin-bottom: 20px; /* 見出しの下の余白 */
+    margin-bottom: 10px; /* 見出しの下の余白 */
     padding-bottom: 5px; /* 文字と下線の間のスペース */
-    border-bottom: 2px solid #fc63a0f6; /* 下線 */
+    border-bottom: 4px solid #fc63a0f6; /* 下線 */
     display: inline-block;
     
 }
 
-.about p {
+#about p {
     font-size: 1.4rem;
     margin-top: 1rem;
     letter-spacing: 0.2em; 
