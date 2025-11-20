@@ -196,6 +196,9 @@ main {
     border-bottom: 5px solid #79bafff6;
     display: inline-block;
     padding-bottom: 5px;
+    font-size: 5rem;
+    letter-spacing: 0.1em;
+    text-align: center;
 }
 
 .work-detail h2 {
