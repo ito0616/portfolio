@@ -3,8 +3,10 @@ body {
     font-family: 'Noto Sans JP', sans-serif; /* フォント */
     color: #333; /* 文字色 */
     margin: 0; /* ブラウザ標準の余白をリセット */
-
-    /* Gridレイアウトを適用 */
+    /* 背景にほんのりグラデーションをかける魔法ですにゃ */
+    background: linear-gradient(to bottom, #ffffff, #f7fcff);
+    
+    /* ページ全体をGridレイアウトにするにゃ */
     display: grid;
     grid-template-areas:
         "header"
@@ -480,7 +482,7 @@ footer nav ul li a {
 .timeline-item {
     position: relative;
     width: 50%;
-    padding: 10px 40px;
+    padding: 10px 60px; /* 左右の余白を広げて、中央の線との距離を作るにゃ */
     box-sizing: border-box;
     margin-bottom: 40px;
 }
