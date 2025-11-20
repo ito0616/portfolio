@@ -193,6 +193,16 @@ main {
     margin: 0 0 5px 0; /* 見出しの余白を調整 */
 }
 
+.skill-rating {
+    margin-top: 8px; /* 説明文とお星様の間のスペースにゃ */
+}
+
+.skill-rating .fa-star {
+    color: #ffc107; /* お星様の色をキラキラのゴールドにするにゃ */
+    margin: 0 1px; /* お星様同士がくっつきすぎないようにするにゃ */
+    font-size: 1.1rem; /* お星様の大きさを調整 */
+}
+
 /* Worksセクション */
 #works {
     text-align: center; /* このセクションの中身をすべて中央揃えにする */
