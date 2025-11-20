@@ -2,17 +2,26 @@
 body {
     font-family: 'Noto Sans JP', sans-serif; /* フォント */
     color: #333; /* 文字色 */
+    margin: 0; /* ブラウザ標準の余白をリセット */
+
+    /* Gridレイアウトを適用 */
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: auto 1fr auto; /* headerとfooterは自身の高さ、mainは残りの全て */
+    min-height: 100vh; /* ページの最小の高さを画面の高さに */
 }
 
 /*ヘッダー*/
 header {
-    width: 100%; /* 画面のはば */
-    /*background-color: #fff; /* 背景；白 */
-    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 影 */
-    position: fixed; /* 画面上部に固定 */
-    top: 0;
-    left: 0;
-    z-index: 100; 
+    grid-area: header; /* headerエリアに配置 */
+    background-color: rgba(255, 255, 255, 0.9); /* 少し透明な背景 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 影 */
+    position: sticky; /* スクロールすると上部にくっつく */
+    top: 0; /* 上部にくっつくための指定 */
+    z-index: 100;
 }
 
 header nav ul {
@@ -42,7 +51,7 @@ header nav ul li a:hover {
 /* メインコンテンツ */
 /* コンテンツの開始位置下げる */
 main {
-    /* padding-top: 80px; */ /* heroセクションで調整するため一旦コメントアウト */
+    grid-area: main; /* mainエリアに配置 */
 }
 
 /* ヒーローセクション　*/
@@ -101,7 +110,10 @@ main {
     padding-bottom: 5px; /* 文字と下線の間のスペース */
     border-bottom: 4px solid #fc63a0f6; /* 下線 */
     display: inline-block;
-    text-align: center; /* 中央揃え */
+    /* 位置を直接調整するための設定 */
+    position: relative;
+    top: -50px; /* 本来の位置より10px上に移動 */
+    left: -20px; /* 本来の位置より20px左に移動 */
 }
 
 #about p {
@@ -203,12 +215,12 @@ main {
     font-size: 1.8rem;
     margin-top: 30px;
     margin-bottom: 15px;
-    border-left: 5px solid #fc63a0f6; /* 左側に線を引くデザインに変更しましたにゃ */
-    padding-left: 10px; /* 線と文字の間の余白ですにゃ */
+    border-left: 5px solid #fc63a0f6; /* 左側に線を引くデザインに変更 */
+    padding-left: 10px; /* 線と文字の間の余白 */
 }
 
 .work-detail p {
-    text-align: left; /* 左揃えの方が見やすいですにゃん */
+    text-align: left; /* 左揃えの方が見やすい */
     line-height: 1.9;
 }
 
@@ -225,5 +237,14 @@ main {
 
 .back-link:hover {
     background-color: #53a6fff6;
+}
+
+/* フッターのスタイル */
+footer {
+    grid-area: footer; /* footerエリアに配置 */
+    text-align: center;
+    padding: 20px;
+    background-color: #f2f2f2;
+    font-size: 0.9rem;
 }
     
