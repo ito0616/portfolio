@@ -126,6 +126,8 @@ Worksセクション
     border-bottom: 4px solid #fc63a0f6; /* 下線 */
     display: inline-block;
     text-align: center; /* 中央揃え */
+    justify-content: center; /* 垂直方向の中央揃え */
+    align-items: center; /* 水平方向の中央揃え */
 }
 
 
@@ -186,7 +188,7 @@ Worksセクション
     padding: 40px 20px;
 }
 
-.work-detail header {
+.work-detail header h1{
     text-align: center;
     margin-bottom: 40px;
     border-bottom: 5px solid #79bafff6;
@@ -199,6 +201,14 @@ Worksセクション
     font-size: 1.8rem;
     margin-top: 30px;
     margin-bottom: 15px;
+    border-bottom: 5px solid #fc63a0f6;
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.work-detail p {
+    text-align: justify;
+    line-height: 1.9;
 }
 
 .back-link {
