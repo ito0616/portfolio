@@ -121,10 +121,24 @@ main {
     letter-spacing: 0.1em; 
     line-height: 1.8; 
     text-align: left; /* テキストを左揃えにする */
-    max-width: 500px; /* p要素の最大幅を指定 */
-    width: 100%; /* 親要素の幅いっぱいに広がるようにする */
-    margin-left: auto; /* 左側の余白を自動で最大にして、要素を右に寄せる */
-    margin-right: 5%; /* 右側の余白をにする */
+}
+
+.about-container {
+    display: flex; /* Flexboxでお写真と文章を横並びにするにゃ */
+    align-items: center; /* 上下中央にきれいに揃えるにゃ */
+    justify-content: center; /* 全体を中央に配置 */
+    gap: 40px; /* お写真と文章の間のスペースにゃ */
+    flex-wrap: wrap; /* スマホでは折り返すようにするにゃ */
+    margin-top: 40px; /* 見出しとの間の余白にゃ */
+}
+
+.profile-image {
+    width: 180px; /* お写真の幅 */
+    height: 180px; /* お写真の高さ */
+    border-radius: 50%; /* お写真をまんまるにする魔法ですにゃ */
+    object-fit: cover; /* 比率を保ったまま、円の中にきれいに収めるにゃ */
+    border: 4px solid #fff; /* 白いフチを付けるにゃ */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* 影を付けて立体感を出すにゃ */
 }
 
 /* Skillsセクション */
