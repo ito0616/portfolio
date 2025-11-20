@@ -17,7 +17,7 @@ body {
 /*ヘッダー*/
 header {
     grid-area: header; /* headerエリアに配置 */
-    background-color: rgba(255, 255, 255, 0.9); /* 少し透明な背景 */
+    background-color: rgba(0, 0, 0, 0.9); /* 少し透明な背景 */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 影 */
     position: sticky; /* スクロールすると上部にくっつく */
     top: 0; /* 上部にくっつくための指定 */
@@ -235,6 +235,24 @@ footer {
     padding: 20px;
     background-color: #f2f2f2;
     font-size: 0.9rem;
+}
+
+footer nav ul {
+    display: flex; /* ★liが横並び */
+    justify-content: right; /* migi揃え */
+    list-style: none; /* ・を消す */
+    margin: 0;
+    padding: 15px 0; /* 上下の余白 */
+}
+
+footer nav ul li {
+    margin: 0 20px; /* 各メニュー項目の左右に余白を設ける */
+}
+
+footer nav ul li a {
+    color: #3b3b3b; /* 文字 */
+    text-decoration: none; /* 下線;消す */
+    transition: color 0.3s; /* 色変化 */
 }
 
 /* レスポンシブ対応 (メディアクエリ)*/
