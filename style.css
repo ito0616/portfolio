@@ -17,8 +17,6 @@ body {
 /*ヘッダー*/
 header {
     grid-area: header; /* headerエリアに配置 */
-    background-color: rgba(0, 0, 0, 0.9); /* 少し透明な背景 */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 影 */
     position: sticky; /* スクロールすると上部にくっつく */
     top: 0; /* 上部にくっつくための指定 */
     z-index: 100;
@@ -239,7 +237,7 @@ footer {
 
 footer nav ul {
     display: flex; /* ★liが横並び */
-    justify-content: right; /* migi揃え */
+    justify-content: center; /* migi揃え */
     list-style: none; /* ・を消す */
     margin: 0;
     padding: 15px 0; /* 上下の余白 */
