@@ -220,6 +220,7 @@ main {
 .work-detail p {
     text-align: left; /* 左揃えの方が見やすい */
     line-height: 1.9;
+    padding-left: 20px; /* 左側に20pxの余白を追加して、開始位置をずらすにゃ */
 }
 
 .back-link {
