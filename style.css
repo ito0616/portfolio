@@ -108,6 +108,22 @@ main {
     margin-top: 1rem;
     letter-spacing: 0.1em; 
     line-height: 1.8; 
-    text-align: center; 
+    text-align: left; /* テキストを左揃えにする */
+}
+
+/* ===============
+Worksセクション
+================ */
+#works h3 {
+    font-size: 1.8rem;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    border-left: 5px solid #fc63a0f6;
+    padding-left: 10px;
+}
+
+#works p {
+    text-align: justify; /* テキストを両端揃えにする */
+    line-height: 1.9; /* 行の高さを調整して読みやすくする */
 }
     
