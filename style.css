@@ -535,7 +535,7 @@ footer nav ul li a {
 .timeline-item:nth-child(odd) .timeline-content::before {
     right: -15px; /* 箱の右側に配置 */
     border-width: 10px 0 10px 15px;
-    border-color: transparent transparent transparent #9df049db; /* 箱と同じ色にする */
+    border-color: transparent transparent transparent #ff9d3bf4; /* 箱と同じ色にするにゃ */
 }
 
 /* 右側の箱（偶数番目）の矢印を左向きに */
