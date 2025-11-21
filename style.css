@@ -524,7 +524,7 @@ footer nav ul li a {
 
 .timeline-content {
     padding: 20px 30px;
-    background-color: #ff9d3bf4; /* お手本みたいな深緑色 */
+    background-color: #63d6fcf6; /* サイトのテーマカラーの水色にゃ */
     color: white;
     border-radius: 8px;
     position: relative;
@@ -544,14 +544,14 @@ footer nav ul li a {
 .timeline-item:nth-child(odd) .timeline-content::before {
     right: -15px; /* 箱の右側に配置 */
     border-width: 10px 0 10px 15px;
-    border-color: transparent transparent transparent #ff9d3bf4; /* 箱と同じ色にするにゃ */
+    border-color: transparent transparent transparent #63d6fcf6; /* 箱と同じ色にするにゃ */
 }
 
 /* 右側の箱（偶数番目）の矢印を左向きに */
 .timeline-item:nth-child(even) .timeline-content::before {
     left: -15px; /* 箱の左側に配置 */
     border-width: 10px 15px 10px 0;
-    border-color: transparent #ff9d3bf4 transparent transparent; /* 箱と同じ色にする */
+    border-color: transparent #63d6fcf6 transparent transparent; /* 箱と同じ色にするにゃ */
 }
 
 .timeline-date {
@@ -572,19 +572,22 @@ footer nav ul li a {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #fff; /* 背景は真っ白 */
+    background-color: rgba(255, 255, 255, 0.5); /* 背景を半透明の白にするにゃ */
+    backdrop-filter: blur(8px); /* 背景をぼかす魔法ですにゃ */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 9999; /* 何よりも手前に表示するにゃ */
-    transition: opacity 0.8s, visibility 0.8s; /* ふわっと消えるための準備 */
+    transition: opacity 1.2s, visibility 1.2s, backdrop-filter 1.2s, background-color 1.2s; /* ゆっくりふわっと消えるための準備 */
 }
 
 /* ローディングが終わったときのスタイル */
 #loading-screen.loaded {
     opacity: 0; /* 透明にする */
     visibility: hidden; /* 見えなくして、クリックもできなくする */
+    backdrop-filter: blur(0px); /* ぼかしをなくすにゃ */
+    background-color: transparent; /* 背景も完全に透明にするにゃ */
 }
 
 /* くるくる回る図形 */
