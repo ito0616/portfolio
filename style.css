@@ -547,6 +547,11 @@ main {
     color: #ccc;
 }
 
+/* アニメーション実験室の入り口にいる黒猫ちゃんの色ですにゃ */
+.black-cat-placeholder {
+    color: #333;
+}
+
 /* フッターのスタイル */
 footer {
     grid-area: footer; /* footerエリアに配置 */
