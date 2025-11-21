@@ -448,6 +448,30 @@ main {
     background-color: #53a6fff6;
 }
 
+/* 作品詳細ページの外部リンクボタンの魔法ですにゃ */
+.project-link {
+    display: inline-block;
+    margin-top: 15px;
+    margin-right: 10px; /* ボタンが隣り合うときのすき間 */
+    padding: 12px 25px;
+    background-color: #fc63a0f6; /* テーマカラーのピンク色 */
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.project-link:hover {
+    background-color: #e0558e; /* 少し濃いピンク色 */
+    transform: translateY(-2px); /* 少しだけ浮き上がるにゃ */
+}
+
+.project-links {
+    margin-top: 20px;
+}
+
 /* フッターのスタイル */
 footer {
     grid-area: footer; /* footerエリアに配置 */
