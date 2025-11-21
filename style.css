@@ -678,17 +678,26 @@ footer nav ul li a {
 .loader-shape {
     width: 50px;
     height: 50px;
-    border: 5px solid #f3f3f3; /* 薄いグレーの円 */
-    border-top: 5px solid #fc63a0f6; /* 上だけピンク色 */
+    background-color: #fc63a0f6; /* サイトのテーマカラーのピンク色にゃ */
     border-radius: 50%;
-    animation: spin 1.5s linear infinite; /* spinという名前のアニメーションを無限に繰り返す */
+    animation: pulse 2s ease-in-out infinite; /* ふわふわ呼吸するアニメーションを無限に繰り返すにゃ */
     margin-bottom: 20px;
 }
 
-/* くるくる回すためのアニメーション本体 */
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+/* ふわふわ呼吸させるためのアニメーション本体ですにゃ */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
 }
 
 /* プログレスバーの背景（枠） */
