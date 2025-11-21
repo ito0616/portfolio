@@ -513,7 +513,7 @@ main {
     margin-top: 15px;
     margin-right: 10px; /* ボタンが隣り合うときのすき間 */
     padding: 12px 25px;
-    background-color: #fc63a0f6; /* テーマカラーのピンク色 */
+    background-color: #f783ac; /* 新しいピンク色に統一にゃ */
     color: white;
     font-weight: bold;
     text-decoration: none;
@@ -523,7 +523,7 @@ main {
 }
 
 .project-link:hover {
-    background-color: #e0558e; /* 少し濃いピンク色 */
+    background-color: #e0749c; /* 少し濃いピンク色 */
     transform: translateY(-2px); /* 少しだけ浮き上がるにゃ */
 }
 
@@ -754,12 +754,12 @@ footer nav ul li a {
 
 /* ローディング画面全体 */
 #loading-screen {
-    position: fixed; /* 画面に固定するにゃ */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.5); /* 背景を半透明の白にするにゃ */
+    background-color: rgba(255, 255, 255, 0.6); /* 背景を半透明の白にするにゃ */
     backdrop-filter: blur(8px); /* 背景をぼかす魔法ですにゃ */
     display: flex;
     flex-direction: column;
@@ -779,10 +779,16 @@ footer nav ul li a {
 
 /* ローディング画面のネコちゃんアイコンですにゃ */
 .loader-icon {
-    font-size: 60px; /* アイコンを大きくするにゃ */
+    font-size: 80px; /* アイコンをもっと大きくするにゃ */
     color: #f783ac; /* 新しいピンク色 */
     animation: spin 2s linear infinite; /* くるくる回すアニメーションを無限に繰り返すにゃ */
-    margin-bottom: 20px;
+}
+
+/* ローディング画面のコンテンツをまとめるコンテナですにゃ */
+.loader-container {
+    display: flex;
+    align-items: center;
+    gap: 25px;
 }
 
 /* くるくる回すためのアニメーション本体ですにゃ */
@@ -813,5 +819,21 @@ footer nav ul li a {
 .loading-active {
     overflow: hidden;
 }
+
+/* ==============================
+   ナビゲーションボタンのネコちゃん
+   ============================== */
+
+nav ul li a .fa-cat {
+    margin-right: 8px; /* 文字との間にすき間を作るにゃ */
+    font-size: 0.9em; /* 文字より少しだけ小さくするにゃ */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* マウスを乗せるとネコちゃんがぷるんっと震える魔法ですにゃ */
+nav ul li a:hover .fa-cat {
+    transform: scale(1.3) rotate(-15deg);
+}
+
 
     
