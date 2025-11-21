@@ -1,20 +1,20 @@
 // animation_test.js
 
-// すべてのアニメーションボタンを取得するにゃ
+// すべてのアニメーションボタンを取得する
 const triggerButtons = document.querySelectorAll('.animation-trigger');
 
-// それぞれのボタンに、クリックされたときの処理を設定していくにゃ
+// それぞれのボタンに、クリックされたときの処理を設定していく
 triggerButtons.forEach(function(button) {
     button.addEventListener('click', function(event) {
-        // クリックされたボタンの種類（data-animation-type）を取得するにゃ
+        // クリックされたボタンの種類（data-animation-type）を取得する
         const animationType = event.target.dataset.animationType;
-        // クリックされたボタンのすぐ下にあるキャンバスを取得するにゃ
+        // クリックされたボタンのすぐ下にあるキャンバスを取得する
         const canvas = event.target.nextElementSibling;
 
-        // まずはキャンバスを空っぽにするにゃ
+        // まずはキャンバスを空っぽにする
         canvas.innerHTML = '';
 
-        // ボタンの種類によって、実行する魔法を変えるにゃ
+        // ボタンの種類によって、実行する魔法を変える
         if (animationType === 'draw-cat') {
             drawCat(canvas);
         } else if (animationType === 'sparkle-stars') {
@@ -23,7 +23,7 @@ triggerButtons.forEach(function(button) {
     });
 });
 
-// ネコちゃんを描く魔法ですにゃ
+// ネコちゃんを描く魔法
 function drawCat(canvas) {
     const face = document.createElement('div');
     face.className = 'cat-face';
@@ -40,21 +40,21 @@ function drawCat(canvas) {
     canvas.appendChild(face);
 }
 
-// キラキラ星を降らせる魔法ですにゃ
+// キラキラ星を降らせる魔法
 function sparkleStars(canvas) {
-    // キラキラの星を15個作るにゃ
+    // キラキラの星を15個作る
     for (let i = 0; i < 15; i++) {
         const star = document.createElement('div');
         star.classList.add('star');
 
-        // 星の位置をランダムに決めるにゃ
+        // 星の位置をランダムに決める
         star.style.top = `${Math.random() * 100}%`;
         star.style.left = `${Math.random() * 100}%`;
 
-        // アニメーションの開始時間を少しずつずらして、パラパラ見えるようにするにゃ
+        // アニメーションの開始時間を少しずつずらして、パラパラ見えるようにする
         star.style.animationDelay = `${Math.random() * 0.5}s`;
 
-        // できた星をキャンバスに追加するにゃ
+        // できた星をキャンバスに追加する
         canvas.appendChild(star);
     }
 }
