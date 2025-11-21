@@ -216,15 +216,26 @@ main {
     letter-spacing: 0.1em; /* 文字と文字の間隔 */
     margin-bottom: 20px; /* p要素との間の余白を調整 */
     padding-bottom: 5px; /* 文字と下線の間のスペース */
-    border-bottom: 4px solid #fc63a0f6; /* 下線 */
+    border-bottom: 5px solid #fc63a0f6; /* 下線を5pxに統一にゃ */
     display: inline-block;
 }
 
-#about p {
-    font-size: 1.4rem;
-    letter-spacing: 0.1em; 
-    line-height: 1.8; 
-    text-align: left; /* テキストを左揃えにする */
+.profile-text ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+.profile-text li {
+    margin-bottom: 10px;
+    line-height: 1.7;
+}
+
+.profile-text strong {
+    display: inline-block;
+    width: 100px; /* ラベルの幅を揃えるにゃ */
 }
 
 .about-container {
@@ -320,7 +331,7 @@ main {
     letter-spacing: 0.1em; /* 文字と文字の間隔 */
     margin-bottom: 40px; /* 見出しの下の余白 */
     padding-bottom: 5px; /* 文字と下線の間のスペース */
-    border-bottom: 4px solid #fc63a0f6; /* 下線 */
+    border-bottom: 5px solid #fc63a0f6; /* 下線を5pxに統一にゃ */
     display: inline-block;
 }
 
@@ -373,7 +384,7 @@ main {
     font-size: 3.6rem;
     letter-spacing: 0.1em;
     margin-bottom: 40px;
-    border-bottom: 4px solid #fc63a0f6;
+    border-bottom: 5px solid #fc63a0f6; /* 下線を5pxに統一にゃ */
     display: inline-block;
     padding-bottom: 5px;
 }
@@ -476,6 +487,40 @@ footer nav ul li a {
         flex-direction: column;
         align-items: center; /* 中央に配置 */
     }
+
+    /* --- スマホでの年表デザインの魔法ですにゃ --- */
+
+    /* 中央の線を左端に移動させるにゃ */
+    .timeline::before {
+        left: 10px;
+    }
+
+    /* すべての項目を左側に寄せるにゃ */
+    .timeline-item {
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 15px;
+        text-align: left; /* 全て左揃えに */
+    }
+
+    /* 偶数番目の配置をリセット */
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+
+    /* 丸いポッチを左端の線の上に配置 */
+    .timeline-item::after {
+        left: 0;
+    }
+
+    /* 吹き出しの矢印をすべて左向きにするにゃ */
+    .timeline-item:nth-child(odd) .timeline-content::before,
+    .timeline-item:nth-child(even) .timeline-content::before {
+        left: -15px;
+        right: auto;
+        border-width: 10px 15px 10px 0;
+        border-color: transparent #63d6fcf6 transparent transparent;
+    }
 }
 
 /* ==============================
@@ -494,7 +539,7 @@ footer nav ul li a {
     letter-spacing: 0.1em;
     margin-bottom: 80px; /* 年表との余白をたっぷりとる */
     padding-bottom: 5px;
-    border-bottom: 4px solid #fc63a0f6;
+    border-bottom: 5px solid #fc63a0f6; /* 下線を5pxに統一にゃ */
     display: inline-block;
 }
 
@@ -660,6 +705,24 @@ footer nav ul li a {
     width: 0%; /* 最初は幅0% */
     height: 100%;
     background-color: #63d6fcf6; /* きれいな水色 */
+    border-radius: 5px;
+    transition: width 2s ease-out; /* 2秒かけてにゅーっと伸びる */
+}
+
+/* ローディング中に背景がスクロールしないようにする魔法 */
+.loading-active {
+    overflow: hidden;
+}
+
+    border-radius: 5px;
+    transition: width 2s ease-out; /* 2秒かけてにゅーっと伸びる */
+}
+
+/* ローディング中に背景がスクロールしないようにする魔法 */
+.loading-active {
+    overflow: hidden;
+}
+
     border-radius: 5px;
     transition: width 2s ease-out; /* 2秒かけてにゅーっと伸びる */
 }
