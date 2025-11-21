@@ -782,17 +782,17 @@ footer nav ul li a {
 
 /* ローディング画面のネコちゃんアイコンですにゃ */
 .loader-icon {
-    font-size: 80px; /* アイコンをもっと大きくするにゃ */
+    font-size: 40px; /* アイコンの大きさを半分にするにゃ */
     color: #f783ac;
     /* animation: spin 2s linear infinite; */ /* くるくる回るアニメーションは止めるにゃ */
-    transform: translateY(10px); /* バーの上に座っているように、少しだけ下にずらす魔法ですにゃ */
 }
 
 /* ローディング画面のコンテンツをまとめるコンテナですにゃ */
 .loader-container {
     display: flex;
-    align-items: flex-end; /* ネコちゃんがバーの下に揃うようにする（座っているように見える）魔法ですにゃ */
-    gap: 25px;
+    flex-direction: column; /* ネコちゃんとバーを縦に並べる魔法ですにゃ */
+    align-items: center; /* 中央にきれいに揃えるにゃ */
+    gap: 15px; /* ネコちゃんとバーの間のすき間を調整するにゃ */
 }
 
 /* くるくる回すためのアニメーション本体ですにゃ */
