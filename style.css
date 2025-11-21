@@ -755,22 +755,4 @@ footer nav ul li a {
     overflow: hidden;
 }
 
-    border-radius: 5px;
-    transition: width 2s ease-out; /* 2秒かけてにゅーっと伸びる */
-}
-
-/* ローディング中に背景がスクロールしないようにする魔法 */
-.loading-active {
-    overflow: hidden;
-}
-
-    border-radius: 5px;
-    transition: width 2s ease-out; /* 2秒かけてにゅーっと伸びる */
-}
-
-/* ローディング中に背景がスクロールしないようにする魔法 */
-.loading-active {
-    overflow: hidden;
-}
-
     
