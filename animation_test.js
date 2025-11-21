@@ -9,20 +9,23 @@ triggerButton.addEventListener('click', function() {
     // 古い星が残っていたら、一度お掃除するにゃ
     canvas.innerHTML = '';
 
-    // キラキラの星を15個作るにゃ
-    for (let i = 0; i < 15; i++) {
-        // 星の要素を作るにゃ
-        const star = document.createElement('div');
-        star.classList.add('star');
+    // ネコちゃんのパーツを作るにゃん！
+    const face = document.createElement('div');
+    face.className = 'cat-face';
 
-        // 星の位置をランダムに決めるにゃ
-        star.style.top = `${Math.random() * 100}%`;
-        star.style.left = `${Math.random() * 100}%`;
+    const earLeft = document.createElement('div');
+    earLeft.className = 'cat-ear left';
 
-        // アニメーションの開始時間を少しずつずらして、パラパラ見えるようにするにゃ
-        star.style.animationDelay = `${Math.random() * 0.5}s`;
+    const earRight = document.createElement('div');
+    earRight.className = 'cat-ear right';
 
-        // できた星をキャンバスに追加するにゃ
-        canvas.appendChild(star);
-    }
+    const eyeLeft = document.createElement('div');
+    eyeLeft.className = 'cat-eye left';
+
+    const eyeRight = document.createElement('div');
+    eyeRight.className = 'cat-eye right';
+
+    // パーツを顔に合体させて、キャンバスに表示するにゃ
+    face.append(earLeft, earRight, eyeLeft, eyeRight);
+    canvas.appendChild(face);
 });

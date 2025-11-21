@@ -464,31 +464,52 @@ main {
     margin-top: 20px;
 }
 
-.star {
+.cat-face {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 110px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    border: 3px solid #ccc;
+}
+
+.cat-ear {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 40px solid #f0f0f0;
+    top: -20px;
+}
+.cat-ear.left { left: -10px; transform: rotate(-20deg); }
+.cat-ear.right { right: -10px; transform: rotate(20deg); }
+
+.cat-ear::before { /* 耳の中のピンクの部分ですにゃ */
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 28px solid #f783ac;
+    top: 8px;
+    left: -20px;
+}
+
+.cat-eye {
     position: absolute;
     width: 10px;
     height: 10px;
-    background-color: #ffc107; /* キラキラのゴールド */
+    background-color: #333;
     border-radius: 50%;
-    /* pop-outというアニメーションを0.8秒かけて実行して、最後は消えるにゃ */
-    animation: pop-out 0.8s ease-out forwards;
+    top: 50px;
 }
-
-/* 星が飛び出すアニメーション本体ですにゃ */
-@keyframes pop-out {
-    0% {
-        transform: scale(0);
-        opacity: 1;
-    }
-    50% {
-        transform: scale(1.5);
-        opacity: 0.8;
-    }
-    100% {
-        transform: scale(0);
-        opacity: 0;
-    }
-}
+.cat-eye.left { left: 30px; }
+.cat-eye.right { right: 30px; }
 
 
 /* 作品詳細ページの外部リンクボタンの魔法ですにゃ */
