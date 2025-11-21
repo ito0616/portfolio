@@ -431,16 +431,20 @@ main {
 .back-link {
     display: inline-block;
     margin-top: 40px;
-    padding: 10px 20px;
-    background-color: #c6f6ff;
-    color: #79bafff6;
+    padding: 10px 25px;
+    border: 2px solid #79d2f0; /* サイトのテーマカラーの水色の枠線にゃ */
+    color: #79d2f0; /* 文字の色も水色にゃ */
+    background-color: transparent; /* 背景は透明にするにゃ */
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    border-radius: 8px; /* 他のボタンと角の丸みを合わせるにゃ */
+    font-weight: bold;
+    transition: all 0.3s; /* すべての変化を滑らかにする魔法ですにゃ */
 }
 
 .back-link:hover {
-    background-color: #53a6fff6;
+    background-color: #79d2f0; /* マウスを乗せたら水色で塗りつぶすにゃ */
+    color: #fff; /* 文字の色は白にするにゃ */
+    transform: translateY(-2px); /* 少しだけ浮き上がるにゃ */
 }
 
 /* ==============================
@@ -672,6 +676,7 @@ footer nav ul li a {
     padding: 10px 60px; /* 左右の余白を広げて、中央の線との距離を作るにゃ */
     box-sizing: border-box;
     margin-bottom: 40px;
+    margin-bottom: 20px; /* 上下の間隔を狭くするにゃ */
 }
 
 /* 奇数番目を左側に配置 */
@@ -780,24 +785,21 @@ footer nav ul li a {
 /* ローディング画面のネコちゃんアイコンですにゃ */
 .loader-icon {
     font-size: 80px; /* アイコンをもっと大きくするにゃ */
-    color: #f783ac; /* 新しいピンク色 */
-    animation: spin 2s linear infinite; /* くるくる回すアニメーションを無限に繰り返すにゃ */
+    color: #f783ac;pin 2s linear infinite; */
+    transform: translateY(10px); /* バーの上に座っているように、少しだけ下にずらす魔法ですにゃ */
 }
 
 /* ローディング画面のコンテンツをまとめるコンテナですにゃ */
 .loader-container {
     display: flex;
-    align-items: center;
+    align-items: flex-end; /* ネコちゃんがバーの下に揃うようにする（座っているように見える）魔法ですにゃ */
     gap: 25px;
-}
 
 /* くるくる回すためのアニメーション本体ですにゃ */
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% { transform: rotate(0deg); } 
+    100% { transform: rotate(360deg); } 
 }
-
-/* プログレスバーの背景（枠） */
 .progress-bar-container {
     width: 250px;
     height: 10px;
