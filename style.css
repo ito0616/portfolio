@@ -674,7 +674,6 @@ footer nav ul li a {
     width: 50%;
     padding: 10px 60px; /* 左右の余白を広げて、中央の線との距離を作るにゃ */
     box-sizing: border-box;
-    margin-bottom: 40px;
     margin-bottom: 20px; /* 上下の間隔を狭くするにゃ */
 }
 
@@ -784,7 +783,8 @@ footer nav ul li a {
 /* ローディング画面のネコちゃんアイコンですにゃ */
 .loader-icon {
     font-size: 80px; /* アイコンをもっと大きくするにゃ */
-    color: #f783ac;pin 2s linear infinite; */
+    color: #f783ac;
+    /* animation: spin 2s linear infinite; */ /* くるくる回るアニメーションは止めるにゃ */
     transform: translateY(10px); /* バーの上に座っているように、少しだけ下にずらす魔法ですにゃ */
 }
 
@@ -793,12 +793,14 @@ footer nav ul li a {
     display: flex;
     align-items: flex-end; /* ネコちゃんがバーの下に揃うようにする（座っているように見える）魔法ですにゃ */
     gap: 25px;
+}
 
 /* くるくる回すためのアニメーション本体ですにゃ */
 @keyframes spin {
     0% { transform: rotate(0deg); } 
     100% { transform: rotate(360deg); } 
 }
+
 .progress-bar-container {
     width: 250px;
     height: 10px;
