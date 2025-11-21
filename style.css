@@ -154,6 +154,44 @@ main {
     }
 }
 
+/* ==============================
+   ページ全体の背景の飾り付けの魔法
+   ============================== */
+
+.background-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* 画面からはみ出した図形を隠すにゃ */
+    z-index: -1; /* すべてのコンテンツの後ろに隠れる魔法ですにゃ */
+}
+
+.background-shapes .shape {
+    opacity: 0.08; /* もう少しだけ薄くして、よりさりげなくするにゃ */
+    animation: float-bg 25s ease-in-out infinite; /* 25秒かけてゆっくりふわふわさせるにゃ */
+}
+
+/* 背景用の図形たちの位置と大きさを決めるにゃ */
+.bg-shape-1 { width: 150px; height: 150px; top: 10vh; left: -50px; }
+.bg-shape-2 { width: 200px; height: 200px; top: 30vh; right: -80px; transform: rotate(15deg); }
+.bg-shape-3 { top: 75vh; left: 20vw; transform: scale(1.5) rotate(-10deg); }
+.bg-shape-4 { width: 120px; height: 120px; bottom: 5vh; right: 10vw; }
+
+/* 背景の図形をゆっくり動かすアニメーション本体ですにゃ */
+@keyframes float-bg {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-25px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
 
 /* aboutセクション */
 
@@ -273,6 +311,7 @@ main {
 #works {
     text-align: center; /* このセクションの中身をすべて中央揃えにする */
     padding: 80px 20px; /* 上下の余白を80px、左右の余白を20pxに */
+    background-color: #f9f9f9; /* 背景色を薄いグレーにするにゃ */
 }
 
 #works h2 {
@@ -444,7 +483,7 @@ footer nav ul li a {
    ============================== */
 
 #career {
-    background-color: #fff; /* 少し落ち着いた背景色 */
+    background-color: #fff; /* 背景を白にして、前のセクションと交互にするにゃ */
     padding: 80px 20px;
     text-align: center;
 }
