@@ -12,18 +12,26 @@
     <div class="work-detail">
         <main>
             <section class="work-description">
-                <h1>ミミのお絵かき実験室</h1>
-                <h2>コードの魔法でお絵かき</h2>
+                <h1>実験室</h1>
+                <h2>JavaScript Animation Test</h2>
                 <p>
-                    ここは、コードの魔法でお絵かきをする実験室ですにゃん。<br>
-                    下のボタンを押すと、わたくしが得意なコードの魔法で、<br>
-                    キャンバスにかわいいネコちゃんを描いてみせますにゃん！
+                    ここは、JavaScriptを使ったアニメーションを試すためのページです。<br>
+                    下のボタンを押すと、それぞれ違うアニメーションが始まります。
                 </p>
             </section>
 
+            <!-- アニメーション1: ネコちゃんお絵かき -->
             <section class="animation-playground">
-                <button id="animation-trigger" class="project-link">ネコちゃんを描く！</button>
+                <h3>ネコちゃんお絵かき</h3>
+                <button class="animation-trigger project-link" data-animation-type="draw-cat">ネコちゃんを描く！</button>
                 <div id="animation-canvas"></div>
+            </section>
+
+            <!-- アニメーション2: キラキラ星 -->
+            <section class="animation-playground">
+                <h3>キラキラ星</h3>
+                <button class="animation-trigger project-link" data-animation-type="sparkle-stars">魔法をかける！</button>
+                <div class="animation-canvas"></div>
             </section>
 
             <a href="index.html#works" class="back-link">ポートフォリオに戻る</a>

@@ -61,6 +61,7 @@ header nav ul li a:hover {
 /* コンテンツの開始位置下げる */
 main {
     grid-area: main; /* mainエリアに配置 */
+    position: relative; /* 背景の図形たちの基準点になる魔法ですにゃ */
 }
 
 /* ヒーローセクション　*/
@@ -160,7 +161,7 @@ main {
    ============================== */
 
 .background-shapes {
-    position: fixed; /* スクロールしても背景が動かないように固定する魔法ですにゃ */
+    position: absolute; /* mainエリアを基準に配置する魔法ですにゃ */
     top: 0;
     left: 0;
     width: 100%;
