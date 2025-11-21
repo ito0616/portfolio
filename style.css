@@ -148,6 +148,19 @@ main {
 .shape-6 { width: 60px; height: 60px; top: 80%; left: 5%; animation-delay: -6s; }
 .shape-7 { width: 50px; height: 50px; top: 5%; right: 40%; animation-delay: -7s; }
 
+/* ふわふわさせるアニメーション本体ですにゃ */
+@keyframes float {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-40px) rotate(20deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
 /* ==============================
    ページ全体の背景の飾り付けの魔法
    ============================== */
@@ -163,15 +176,24 @@ main {
 }
 
 .background-shapes .shape {
-    opacity: 0.08; /* もう少しだけ薄くして、よりさりげなくするにゃ */
-    animation: float-bg 25s ease-in-out infinite; /* 25秒かけてゆっくりふわふわさせるにゃ */
+    opacity: 0; /* 最初は見えないようにするにゃ */
+    animation: fly-up 15s linear infinite; /* 15秒かけてふわふわ昇るアニメーションにゃ */
+    bottom: -150px; /* 画面の下からスタートするにゃ */
 }
 
-/* 背景用の図形たちの位置と大きさを決めるにゃ */
-.bg-shape-1 { width: 150px; height: 150px; top: 10vh; left: -50px; }
-.bg-shape-2 { width: 200px; height: 200px; top: 30vh; right: -80px; transform: rotate(15deg); }
-.bg-shape-3 { top: 75vh; left: 20vw; transform: scale(1.5) rotate(-10deg); }
-.bg-shape-4 { width: 120px; height: 120px; bottom: 5vh; right: 10vw; }
+/* 図形ごとに、飛ぶ場所や速さ、大きさを変える魔法ですにゃ */
+.background-shapes .shape:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 15s; width: 80px; height: 80px; }
+.background-shapes .shape:nth-child(2) { left: 20%; animation-delay: 2s; animation-duration: 12s; width: 30px; height: 30px; }
+.background-shapes .shape:nth-child(3) { left: 25%; animation-delay: 4s; animation-duration: 18s; width: 50px; height: 50px; }
+.background-shapes .shape:nth-child(4) { left: 40%; animation-delay: 0s; animation-duration: 20s; width: 60px; height: 60px; }
+.background-shapes .shape:nth-child(5) { left: 55%; animation-delay: 1s; animation-duration: 14s; width: 20px; height: 20px; }
+.background-shapes .shape:nth-child(6) { left: 65%; animation-delay: 3s; animation-duration: 16s; width: 110px; height: 110px; }
+.background-shapes .shape:nth-child(7) { left: 75%; animation-delay: 7s; animation-duration: 19s; width: 150px; height: 150px; }
+.background-shapes .shape:nth-child(8) { left: 85%; animation-delay: 5s; animation-duration: 13s; width: 40px; height: 40px; }
+.background-shapes .shape:nth-child(9) { left: 50%; animation-delay: 8s; animation-duration: 17s; width: 70px; height: 70px; }
+.background-shapes .shape:nth-child(10) { left: 90%; animation-delay: 9s; animation-duration: 11s; width: 50px; height: 50px; }
+
+
 
 /* aboutセクション */
 
@@ -548,6 +570,62 @@ footer nav ul li a {
     transition: color 0.3s; /* 色変化 */
 }
 
+/* レスポンシブ対応 (メディアクエリ)*/
+
+/* 画面幅が768px以下の場合に適用するスタイル */
+@media (max-width: 768px) {
+
+    /* ヘッダーのメニューの余白を少し詰める */
+    header nav ul li {
+        margin: 0 10px;
+    }
+
+    /* 見出しの文字を少し小さくする */
+    .hero h1, #about h2, #works h2 {
+        font-size: 2.5rem;
+    }
+
+    /* 制作物一覧を縦積みにする */
+    .works-grid {
+        flex-direction: column;
+        align-items: center; /* 中央に配置 */
+    }
+
+    /* --- スマホでの年表デザインの魔法ですにゃ --- */
+
+    /* 中央の線を左端に移動させるにゃ */
+    .timeline::before {
+        left: 10px;
+    }
+
+    /* すべての項目を左側に寄せるにゃ */
+    .timeline-item {
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 15px;
+        text-align: left; /* 全て左揃えに */
+    }
+
+    /* 偶数番目の配置をリセット */
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+
+    /* 丸いポッチを左端の線の上に配置 */
+    .timeline-item::after {
+        left: 0;
+    }
+
+    /* 吹き出しの矢印をすべて左向きにするにゃ */
+    .timeline-item:nth-child(odd) .timeline-content::before,
+    .timeline-item:nth-child(even) .timeline-content::before {
+        left: -15px;
+        right: auto;
+        border-width: 10px 15px 10px 0;
+        border-color: transparent #63d6fcf6 transparent transparent;
+    }
+}
+
 /* ==============================
    Careerセクション (年表デザイン)
    ============================== */
@@ -699,14 +777,18 @@ footer nav ul li a {
     background-color: transparent; /* 背景も完全に透明にするにゃ */
 }
 
-/* くるくる回る図形 */
-.loader-shape {
-    width: 50px;
-    height: 50px;
-    background-color: #f783ac; /* 新しいピンク色 */
-    border-radius: 50%;
-    animation: pulse 2s ease-in-out infinite; /* ふわふわ呼吸するアニメーションを無限に繰り返すにゃ */
+/* ローディング画面のネコちゃんアイコンですにゃ */
+.loader-icon {
+    font-size: 60px; /* アイコンを大きくするにゃ */
+    color: #f783ac; /* 新しいピンク色 */
+    animation: spin 2s linear infinite; /* くるくる回すアニメーションを無限に繰り返すにゃ */
     margin-bottom: 20px;
+}
+
+/* くるくる回すためのアニメーション本体ですにゃ */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 /* プログレスバーの背景（枠） */
