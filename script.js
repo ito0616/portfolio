@@ -66,3 +66,25 @@ const observer = new IntersectionObserver(function(entries) {
 targets.forEach(function(target) {
     observer.observe(target);
 });
+
+// --- スムーズスクロールの魔法 ---
+// ヘッダーとフッターにあるナビゲーションのリンクをすべて取得する
+const navLinks = document.querySelectorAll('header nav a[href^="#"], footer nav a[href^="#"]');
+
+navLinks.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+        // リンクがクリックされたときの、デフォルトの瞬間移動を止める
+        e.preventDefault();
+
+        // リンクのhref属性（例: "#works"）を取得する
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        // 目的の場所まで、ページを「するする〜」っとスクロールさせる
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
+});
