@@ -148,19 +148,6 @@ main {
 .shape-6 { width: 60px; height: 60px; top: 80%; left: 5%; animation-delay: -6s; }
 .shape-7 { width: 50px; height: 50px; top: 5%; right: 40%; animation-delay: -7s; }
 
-/* ふわふわさせるアニメーション本体ですにゃ */
-@keyframes float {
-    0% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-40px) rotate(20deg);
-    }
-    100% {
-        transform: translateY(0px) rotate(0deg);
-    }
-}
-
 /* ==============================
    ページ全体の背景の飾り付けの魔法
    ============================== */
@@ -185,20 +172,6 @@ main {
 .bg-shape-2 { width: 200px; height: 200px; top: 30vh; right: -80px; transform: rotate(15deg); }
 .bg-shape-3 { top: 75vh; left: 20vw; transform: scale(1.5) rotate(-10deg); }
 .bg-shape-4 { width: 120px; height: 120px; bottom: 5vh; right: 10vw; }
-
-/* 背景の図形をゆっくり動かすアニメーション本体ですにゃ */
-@keyframes float-bg {
-    0% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-25px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
-}
-
 
 /* aboutセクション */
 
@@ -575,62 +548,6 @@ footer nav ul li a {
     transition: color 0.3s; /* 色変化 */
 }
 
-/* レスポンシブ対応 (メディアクエリ)*/
-
-/* 画面幅が768px以下の場合に適用するスタイル */
-@media (max-width: 768px) {
-
-    /* ヘッダーのメニューの余白を少し詰める */
-    header nav ul li {
-        margin: 0 10px;
-    }
-
-    /* 見出しの文字を少し小さくする */
-    .hero h1, #about h2, #works h2 {
-        font-size: 2.5rem;
-    }
-
-    /* 制作物一覧を縦積みにする */
-    .works-grid {
-        flex-direction: column;
-        align-items: center; /* 中央に配置 */
-    }
-
-    /* --- スマホでの年表デザインの魔法ですにゃ --- */
-
-    /* 中央の線を左端に移動させるにゃ */
-    .timeline::before {
-        left: 10px;
-    }
-
-    /* すべての項目を左側に寄せるにゃ */
-    .timeline-item {
-        width: 100%;
-        padding-left: 50px;
-        padding-right: 15px;
-        text-align: left; /* 全て左揃えに */
-    }
-
-    /* 偶数番目の配置をリセット */
-    .timeline-item:nth-child(even) {
-        left: 0;
-    }
-
-    /* 丸いポッチを左端の線の上に配置 */
-    .timeline-item::after {
-        left: 0;
-    }
-
-    /* 吹き出しの矢印をすべて左向きにするにゃ */
-    .timeline-item:nth-child(odd) .timeline-content::before,
-    .timeline-item:nth-child(even) .timeline-content::before {
-        left: -15px;
-        right: auto;
-        border-width: 10px 15px 10px 0;
-        border-color: transparent #63d6fcf6 transparent transparent;
-    }
-}
-
 /* ==============================
    Careerセクション (年表デザイン)
    ============================== */
@@ -790,22 +707,6 @@ footer nav ul li a {
     border-radius: 50%;
     animation: pulse 2s ease-in-out infinite; /* ふわふわ呼吸するアニメーションを無限に繰り返すにゃ */
     margin-bottom: 20px;
-}
-
-/* ふわふわ呼吸させるためのアニメーション本体ですにゃ */
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        opacity: 0.8;
-    }
-    50% {
-        transform: scale(1.2);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 0.8;
-    }
 }
 
 /* プログレスバーの背景（枠） */

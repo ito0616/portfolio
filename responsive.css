@@ -1,0 +1,57 @@
+/* ==============================
+   レスポンシブ対応 (メディアクエリ)
+   ============================== */
+
+/* 画面幅が768px以下の場合に適用するスタイル */
+@media (max-width: 768px) {
+
+    /* ヘッダーのメニューの余白を少し詰める */
+    header nav ul li {
+        margin: 0 10px;
+    }
+
+    /* 見出しの文字を少し小さくする */
+    .hero h1, #about h2, #works h2 {
+        font-size: 2.5rem;
+    }
+
+    /* 制作物一覧を縦積みにする */
+    .works-grid {
+        flex-direction: column;
+        align-items: center; /* 中央に配置 */
+    }
+
+    /* --- スマホでの年表デザインの魔法ですにゃ --- */
+
+    /* 中央の線を左端に移動させるにゃ */
+    .timeline::before {
+        left: 10px;
+    }
+
+    /* すべての項目を左側に寄せるにゃ */
+    .timeline-item {
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 15px;
+        text-align: left; /* 全て左揃えに */
+    }
+
+    /* 偶数番目の配置をリセット */
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+
+    /* 丸いポッチを左端の線の上に配置 */
+    .timeline-item::after {
+        left: 0;
+    }
+
+    /* 吹き出しの矢印をすべて左向きにするにゃ */
+    .timeline-item:nth-child(odd) .timeline-content::before,
+    .timeline-item:nth-child(even) .timeline-content::before {
+        left: -15px;
+        right: auto;
+        border-width: 10px 15px 10px 0;
+        border-color: transparent #63d6fcf6 transparent transparent;
+    }
+}
