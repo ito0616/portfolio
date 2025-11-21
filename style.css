@@ -16,6 +16,13 @@ body {
     min-height: 100vh; /* ページの最小の高さを画面の高さに */
 }
 
+.zen-maru-gothic-regular {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 /*ヘッダー*/
 header {
     grid-area: header; /* headerエリアに配置 */
@@ -380,7 +387,7 @@ main {
 }
 
 .work-detail h1 {
-    font-family: 'Tinos', serif;
+    font-family: 'Zen Maru Gothic', sans-serif;
     font-size: 3.6rem;
     letter-spacing: 0.1em;
     margin-bottom: 40px;
@@ -390,6 +397,7 @@ main {
 }
 
 .work-detail h2 {
+    font-family: 'Zen Maru Gothic', sans-serif;
     font-size: 2.4rem;
     margin-top: 30px;
     margin-bottom: 15px;
