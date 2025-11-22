@@ -3,10 +3,10 @@ body {
   font-family: "Noto Sans JP", sans-serif; /* フォント */
   color: #333; /* 文字色 */
   margin: 0; /* ブラウザ標準の余白をリセット */
-  background-color: #f7fcff; /* サイト全体の基本的な背景色ですにゃ */
+  background-color: #f7fcff; /* サイト全体の基本的な背景色 */
 }
 
-/* サイト全体の壁紙になる魔法のエリアですにゃん */
+/* サイト全体の背景エリア */
 .site-background {
   position: fixed;
   top: 0;
@@ -14,10 +14,10 @@ body {
   width: 100%;
   height: 100%;
   background: linear-gradient(to bottom, #ffffff, #f7fcff);
-  z-index: -2; /* 背景の図形よりも、さらに後ろにいく魔法ですにゃ */
+  z-index: -2; /* 背景の図形よりも後ろに配置 */
 }
 
-/* 新しい親分（ラッパー）の魔法ですにゃん！ */
+/* サイト全体のラッパー */
 .site-wrapper {
   /* ページ全体をGridレイアウトにするにゃ */
   display: grid;
@@ -84,12 +84,7 @@ main {
   justify-content: center; /* 垂直方向の中央揃え */
   align-items: center; /* 水平方向の中央揃え */
 
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.8
-  ); /* 背景を少しだけ透明な白にするにゃ */
+  background-color: rgba(255, 255, 255, 0.8); /* 背景を少し透明な白に */
   color: #000000; /* 文字；黒 */
 
   /* テキストのスタイル */
@@ -109,18 +104,18 @@ main {
 }
 
 /* ==============================
-   ヒーローセクションの飾り付けの魔法
+   ヒーローセクションの飾り付け
    ============================== */
 
 .hero {
-  position: relative; /* 図形を絶対配置するための基準にするにゃ */
-  overflow: hidden; /* 画面からはみ出した図形を隠すにゃ */
+  position: relative; /* 図形を絶対配置するための基準 */
+  overflow: hidden; /* 画面からはみ出した図形を隠す */
 }
 
 .shape {
   position: absolute;
   opacity: 0.3; /* 少しだけ透明にして、ふんわりした感じに */
-  animation: float 8s ease-in-out infinite; /* 8秒かけてふわふわ浮き沈みするアニメーションを無限に繰り返すにゃ */
+  animation: float 8s ease-in-out infinite; /* 8秒かけて浮き沈みするアニメーションを無限に繰り返す */
 }
 
 /* 正方形 */
@@ -132,25 +127,25 @@ main {
 .shape-triangle {
   width: 0;
   height: 0;
-  /* borderを使って三角形を作る魔法ですにゃ */
+  /* borderで三角形を作成 */
   border-left: 40px solid transparent;
   border-right: 40px solid transparent;
   border-bottom: 70px solid #79d2f0; /* 新しい水色 */
 }
 
-/* ひし形（正方形を45度回転させるにゃ） */
+/* ひし形（正方形を45度回転） */
 .shape-rhombus {
   background-color: #f9b268; /* 新しいオレンジ色 */
   transform: rotate(45deg);
 }
 
-/* 丸ですにゃ */
+/* 丸 */
 .shape-circle {
   background-color: #f8e473; /* 新しい黄色 */
   border-radius: 50%;
 }
 
-/* 図形たちの大きさと位置を個別に設定するにゃ */
+/* 図形の大きさと位置を個別に設定 */
 .shape-1 {
   width: 80px;
   height: 80px;
@@ -199,28 +194,28 @@ main {
 }
 
 /* ==================================
-   【新しい！】ページ全体の背景の飾り付けの魔法
+   ページ全体の背景の飾り付け
    ================================== */
 
 .background-shapes {
-  position: fixed; /* スクロールしても背景が動かないように固定する魔法ですにゃ */
+  position: fixed; /* スクロールしても背景が動かないように固定 */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden; /* 画面からはみ出した図形を隠すにゃ */
-  z-index: -1; /* すべてのコンテンツの後ろに隠れる、一番大事な魔法ですにゃ */
+  overflow: hidden; /* 画面からはみ出した図形を隠す */
+  z-index: -1; /* すべてのコンテンツの後ろに配置 */
 }
 
 .background-shapes .shape,
 .background-animation-canvas .shape {
   position: absolute;
-  opacity: 0; /* 最初は見えないようにするにゃ */
-  animation: fly-up 15s linear infinite; /* 15秒かけてふわふわ昇るアニメーションにゃ */
-  bottom: -150px; /* 画面の下からスタートするにゃ */
+  opacity: 0; /* 最初は非表示 */
+  animation: fly-up 15s linear infinite; /* 15秒かけて昇るアニメーション */
+  bottom: -150px; /* 画面の下からスタート */
 }
 
-/* 図形ごとに、飛ぶ場所や速さ、大きさを変える魔法ですにゃ */
+/* 図形ごとに、飛ぶ場所や速さ、大きさを変更 */
 .background-shapes .shape:nth-child(1),
 .background-animation-canvas .shape:nth-child(1) {
   left: 10%;
@@ -306,12 +301,7 @@ main {
   justify-content: center; /* 垂直方向の中央揃え */
   align-items: center; /* 水平方向の中央揃え */
 
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.8
-  ); /* 背景を少しだけ透明な白にするにゃ */
+  background-color: rgba(255, 255, 255, 0.8); /* 背景を少し透明な白に */
   color: #333; /* 文字；黒 */
 
   /* テキストのスタイル */
@@ -344,7 +334,7 @@ main {
 
 .profile-text strong {
   display: inline-block;
-  width: 100px; /* ラベルの幅を揃えるにゃ */
+  width: 100px; /* ラベルの幅を揃える */
 }
 
 .about-container {
@@ -367,12 +357,7 @@ main {
 
 /* Skillsセクション */
 #skills {
-  background-color: rgba(
-    249,
-    249,
-    249,
-    0.8
-  ); /* 背景を少しだけ透明なグレーにするにゃ */
+  background-color: rgba(249, 249, 249, 0.8); /* 背景を少し透明なグレーに */
   text-align: center;
   padding: 80px 20px;
 }
@@ -388,7 +373,7 @@ main {
 }
 
 #skills h3 {
-  border-bottom: 2.5px solid #79d2f0; /* 新しい水色に統一にゃ */
+  border-bottom: 2.5px solid #79d2f0; /* 新しい水色に統一 */
   display: inline-block;
 }
 
@@ -412,12 +397,12 @@ main {
   height: 80px; /* アイコン画像の高さを揃える */
   object-fit: contain; /* 画像の比率を保ったまま収める */
   flex-shrink: 0; /* アイコンが縮まないようにする */
-  transition: transform 0.3s ease-in-out; /* ぷるんと動くための準備の魔法ですにゃ */
+  transition: transform 0.3s ease-in-out; /* アニメーションの準備 */
 }
 
-/* スキル全体にマウスを乗せたら、アイコンがぷるんと動く魔法ですにゃ */
+/* スキル全体にマウスを乗せたら、アイコンが動く */
 .skill-item:hover .skill-icon {
-  transform: scale(1.05) rotate(-5deg); /* 控えめに、ぷるんっと動かすにゃん！ */
+  transform: scale(1.05) rotate(-5deg); /* 控えめに動かす */
 }
 
 .skill-text {
@@ -442,12 +427,7 @@ main {
 #works {
   text-align: center; /* このセクションの中身をすべて中央揃えにする */
   padding: 80px 20px; /* 上下の余白を80px、左右の余白を20pxに */
-  background-color: rgba(
-    249,
-    249,
-    249,
-    0.8
-  ); /* 背景を少しだけ透明なグレーにするにゃ */
+  background-color: rgba(249, 249, 249, 0.8); /* 背景を少し透明なグレーに */
 }
 
 #works h2 {
@@ -471,7 +451,7 @@ main {
 .work-item a {
   display: block;
   text-decoration: none;
-  color: #333; /* タイトルの文字を黒にするにゃ */
+  color: #333; /* タイトルの文字を黒に */
   border: 1px solid #ddd; /* 薄いグレーの枠線を追加するにゃ */
   border-radius: 8px;
   overflow: hidden;
@@ -480,9 +460,7 @@ main {
 
 .work-item a:hover {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transform: translateY(
-    -5px
-  ); /* マウスを乗せたらふわっと浮き上がる魔法ですにゃ */
+  transform: translateY(-5px); /* マウスを乗せたら浮き上がる */
 }
 
 .work-item img,
@@ -491,19 +469,19 @@ main {
   height: 200px;
   object-fit: cover;
   display: block;
-  transition: transform 0.3s ease; /* ぐぐ〜っとズームするための準備の魔法ですにゃ */
+  transition: transform 0.3s ease; /* ズームアニメーションの準備 */
 }
 
 .work-title {
   font-weight: bold;
   padding: 15px;
   text-align: center;
-  background-color: #f9f9f9; /* 背景を薄いグレーにするにゃ */
+  background-color: #f9f9f9; /* 背景を薄いグレーに */
 }
 
-/* カードにマウスを乗せたら、中の画像を少しだけ大きくする魔法ですにゃ */
+/* カードにマウスを乗せたら、中の画像を少しだけ大きくする */
 .work-item a:hover img {
-  transform: scale(1.1); /* 1.1倍に拡大するにゃん！ */
+  transform: scale(1.1); /* 1.1倍に拡大 */
 }
 
 /* 詳細ページのスタイル */
@@ -528,18 +506,18 @@ main {
   font-size: 2.4rem;
   margin-top: 30px;
   margin-bottom: 15px;
-  border-left: 5px solid #79d2f0; /* 新しい水色に統一にゃ */
+  border-left: 5px solid #79d2f0; /* 新しい水色に統一 */
   padding-left: 0px;
 }
 
-/* アニメーション実験室だけの特別なタイトルですにゃ */
+/* アニメーション実験室だけの特別なタイトル */
 .animation-lab-page .mimi-special-title {
   font-family: "Zen Maru Gothic", sans-serif;
   color: #f783ac;
   border-bottom-color: #79d2f0;
 }
 
-/* アニメーション実験室だけの特別なサブタイトルですにゃ */
+/* アニメーション実験室だけの特別なサブタイトル */
 .animation-lab-page .work-detail h2 {
   font-family: "Zen Maru Gothic", sans-serif;
   font-size: 1.8rem;
@@ -566,8 +544,8 @@ main {
   margin: 0;
   flex: 1; /* 空きスペースを均等に分け合う */
   min-width: 200px; /* 最小幅を指定して、小さくなりすぎないようにする */
-  overflow: hidden; /* 拡大した画像がはみ出さないようにする魔法ですにゃ */
-  border-radius: 4px; /* 角を丸くして、画像と合わせるにゃ */
+  overflow: hidden; /* 拡大した画像がはみ出さないようにする */
+  border-radius: 4px; /* 角を丸くして、画像と合わせる */
 }
 
 .work-detail .work-images img {
@@ -577,35 +555,35 @@ main {
   border: 1px solid #ddd;
   border-radius: 4px;
   background-color: #f9f9f9; /* 画像の背景を少し色付けする */
-  transition: transform 0.3s ease; /* 0.3秒かけてふわっと変化する魔法ですにゃ */
+  transition: transform 0.3s ease; /* 0.3秒かけて変化させる */
 }
 
-/* figureタグにマウスを乗せたら、中のimgを少しだけ大きくする魔法ですにゃ */
+/* figureタグにマウスを乗せたら、中のimgを少しだけ大きくする */
 .work-detail .work-images figure:hover img {
-  transform: scale(1.1); /* 1.1倍に拡大するにゃん！ */
+  transform: scale(1.1); /* 1.1倍に拡大 */
 }
 
 .back-link {
   display: inline-block;
   margin-top: 40px;
   padding: 10px 25px;
-  border: 2px solid #79d2f0; /* サイトのテーマカラーの水色の枠線にゃ */
-  color: #79d2f0; /* 文字の色も水色にゃ */
-  background-color: transparent; /* 背景は透明にするにゃ */
+  border: 2px solid #79d2f0; /* サイトのテーマカラーの水色の枠線 */
+  color: #79d2f0; /* 文字の色も水色に */
+  background-color: transparent; /* 背景は透明に */
   text-decoration: none;
-  border-radius: 8px; /* 他のボタンと角の丸みを合わせるにゃ */
+  border-radius: 8px; /* 他のボタンと角の丸みを合わせる */
   font-weight: bold;
-  transition: all 0.3s; /* すべての変化を滑らかにする魔法ですにゃ */
+  transition: all 0.3s; /* すべての変化を滑らかにする */
 }
 
 .back-link:hover {
-  background-color: #79d2f0; /* マウスを乗せたら水色で塗りつぶすにゃ */
-  color: #fff; /* 文字の色は白にするにゃ */
-  transform: translateY(-2px); /* 少しだけ浮き上がるにゃ */
+  background-color: #79d2f0; /* マウスを乗せたら水色で塗りつぶす */
+  color: #fff; /* 文字の色は白にする */
+  transform: translateY(-2px); /* 少しだけ浮き上がる */
 }
 
 /* ==============================
-   アニメーション実験室の魔法
+   アニメーション実験室のスタイル
    ============================== */
 
 .animation-playground {
@@ -661,7 +639,7 @@ main {
 }
 
 .cat-ear::before {
-  /* 耳の中のピンクの部分ですにゃ */
+  /* 耳の中のピンクの部分 */
   content: "";
   position: absolute;
   width: 0;
@@ -688,13 +666,13 @@ main {
   right: 30px;
 }
 
-/* 作品詳細ページの外部リンクボタンの魔法ですにゃ */
+/* 作品詳細ページの外部リンクボタン */
 .project-link {
   display: inline-block;
   margin-top: 15px;
   margin-right: 10px; /* ボタンが隣り合うときのすき間 */
   padding: 12px 25px;
-  background-color: #f783ac; /* 新しいピンク色に統一にゃ */
+  background-color: #f783ac; /* 新しいピンク色に統一 */
   color: white;
   font-weight: bold;
   text-decoration: none;
@@ -705,7 +683,7 @@ main {
 
 .project-link:hover {
   background-color: #e0749c; /* 少し濃いピンク色 */
-  transform: translateY(-2px); /* 少しだけ浮き上がるにゃ */
+  transform: translateY(-2px); /* 少しだけ浮き上がる */
 }
 
 /* アニメーション実験室だけの、ミミ特製のかわいいストライプ背景ですにゃ！ */
@@ -741,7 +719,7 @@ main {
   overflow: hidden;
 }
 .background-animation-canvas .shape {
-  opacity: 0.15; /* 最初から見えるようにするにゃ */
+  opacity: 0.15; /* 最初から見えるようにする */
 }
 
 /* 星評価用のキャンバス */
@@ -751,17 +729,17 @@ main {
   align-items: center;
 }
 
-/* --- 【ここから追加にゃん！】アニメーション実験室の星評価のための特別な魔法 --- */
+/* --- アニメーション実験室の星評価のためのスタイル --- */
 
-/* 星評価の土台のスタイルですにゃ */
+/* 星評価の土台のスタイル */
 .skills-animation-canvas .skill-rating {
-  position: relative; /* 金色のお星様を重ねるための基準点にするにゃ */
-  display: inline-block; /* 中身の幅に合わせるにゃ */
+  position: relative; /* 金色の星を重ねるための基準点 */
+  display: inline-block; /* 中身の幅に合わせる */
 }
 
-/* 空っぽのお星様（下の層）のスタイルですにゃ */
+/* 空の星（下の層）のスタイル */
 .skills-animation-canvas .skill-rating > i {
-  color: #ccc; /* 空っぽのお星様は薄いグレーにするにゃ */
+  color: #ccc; /* 空の星は薄いグレーにする */
 }
 
 /* 金色のお星様（上の層）を作る魔法ですにゃ */
@@ -770,13 +748,13 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  color: #ffc107; /* キラキラのゴールドですにゃ */
-  overflow: hidden; /* はみ出した部分を隠す魔法ですにゃ */
-  width: 0; /* 最初は隠しておく（幅を0にする）にゃ */
-  transition: width 0.5s ease-in-out; /* 0.5秒かけてにゅーっと現れる魔法ですにゃ */
-  font-family: "Font Awesome 6 Free"; /* Font Awesomeのフォントを使うおまじないですにゃ */
-  font-weight: 900; /* fa-solidと同じ太さにするおまじないですにゃ */
-  letter-spacing: 2.2px; /* お星様の間のスペースを調整するにゃ */
+  color: #ffc107; /* キラキラのゴールド */
+  overflow: hidden; /* はみ出した部分を隠す */
+  width: 0; /* 最初は隠しておく（幅を0にする） */
+  transition: width 0.5s ease-in-out; /* 0.5秒かけて現れるアニメーション */
+  font-family: "Font Awesome 6 Free"; /* Font Awesomeのフォントを使用 */
+  font-weight: 900; /* fa-solidと同じ太さにする */
+  letter-spacing: 2.2px; /* 星の間のスペースを調整 */
 }
 
 /* ぷるんネコちゃん用のキャンバス */
@@ -795,9 +773,9 @@ main {
   color: #f783ac;
 }
 
-/* スキル全体にマウスを乗せたら、金色のお星様が現れる魔法ですにゃ */
+/* スキル全体にマウスを乗せたら、金色の星が現れる */
 .skills-animation-canvas .skill-item:hover .skill-rating::before {
-  /* JavaScriptで設定した幅（--rating-width）まで、にゅーっと伸びるにゃ */
+  /* JavaScriptで設定した幅（--rating-width）まで伸びる */
   width: var(--rating-width);
 }
 
@@ -805,7 +783,7 @@ main {
   margin-top: 20px;
 }
 
-/* worksセクションのプレースホルダー画像のスタイルですにゃ */
+/* worksセクションのプレースホルダー画像のスタイル */
 .work-image-placeholder {
   width: 300px;
   height: 200px;
@@ -817,7 +795,7 @@ main {
   color: #ccc;
 }
 
-/* アニメーション実験室の入り口にいる黒猫ちゃんの色ですにゃ */
+/* アニメーション実験室の入り口の黒猫の色 */
 .black-cat-placeholder {
   color: #333;
 }
@@ -871,14 +849,14 @@ footer nav ul li a {
     align-items: center; /* 中央に配置 */
   }
 
-  /* --- スマホでの年表デザインの魔法ですにゃ --- */
+  /* --- スマホでの年表デザイン --- */
 
-  /* 中央の線を左端に移動させるにゃ */
+  /* 中央の線を左端に移動 */
   .timeline::before {
     left: 10px;
   }
 
-  /* すべての項目を左側に寄せるにゃ */
+  /* すべての項目を左側に寄せる */
   .timeline-item {
     width: 100%;
     padding-left: 50px;
@@ -896,7 +874,7 @@ footer nav ul li a {
     left: 0;
   }
 
-  /* 吹き出しの矢印をすべて左向きにするにゃ */
+  /* 吹き出しの矢印をすべて左向きにする */
   .timeline-item:nth-child(odd) .timeline-content::before,
   .timeline-item:nth-child(even) .timeline-content::before {
     left: -15px;
@@ -911,12 +889,7 @@ footer nav ul li a {
    ============================== */
 
 #career {
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.8
-  ); /* 背景を少しだけ透明な白にするにゃ */
+  background-color: rgba(255, 255, 255, 0.8); /* 背景を少し透明な白に */
   padding: 80px 20px;
   text-align: center;
 }
@@ -954,7 +927,7 @@ footer nav ul li a {
 .timeline-item {
   position: relative;
   width: 50%;
-  padding: 10px 60px; /* 左右の余白を広げて、中央の線との距離を作るにゃ */
+  padding: 10px 60px; /* 左右の余白を広げて、中央の線との距離を作成 */
   box-sizing: border-box;
   margin-bottom: 20px; /* 上下の間隔を狭くするにゃ */
 }
@@ -1000,13 +973,13 @@ footer nav ul li a {
   color: white;
   border-radius: 8px;
   position: relative;
-  transition: transform 0.3s, box-shadow 0.3s; /* ふわっと動くための準備の魔法ですにゃ */
+  transition: transform 0.3s, box-shadow 0.3s; /* アニメーションの準備 */
 }
 
-/* 年表の箱にマウスを乗せたら、ふわっと浮き上がらせる魔法ですにゃ */
+/* 年表の箱にマウスを乗せたら、浮き上がらせる */
 .timeline-item:hover .timeline-content {
-  transform: translateY(-3px); /* もっと少しだけ上に動かすにゃ */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12); /* 影も控えめにするにゃ */
+  transform: translateY(-3px); /* 少しだけ上に動かす */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12); /* 影も控えめにする */
 }
 
 /* 吹き出しの矢印部分を作る */
@@ -1021,14 +994,14 @@ footer nav ul li a {
 
 /* 左側の箱（奇数番目）の矢印を右向きに */
 .timeline-item:nth-child(odd) .timeline-content::before {
-  right: -18px; /* 箱の右側に配置（少しだけ外にずらすにゃ） */
+  right: -18px; /* 箱の右側に配置（少しだけ外にずらす） */
   border-width: 10px 0 10px 15px;
   border-color: transparent transparent transparent #79d2f0; /* 新しい水色 */
 }
 
 /* 右側の箱（偶数番目）の矢印を左向きに */
 .timeline-item:nth-child(even) .timeline-content::before {
-  left: -18px; /* 箱の左側に配置（少しだけ外にずらすにゃ） */
+  left: -18px; /* 箱の左側に配置（少しだけ外にずらす） */
   border-width: 10px 15px 10px 0;
   border-color: transparent #79d2f0 transparent transparent; /* 新しい水色 */
 }
@@ -1041,7 +1014,7 @@ footer nav ul li a {
 }
 
 /* ==============================
-   ローディング画面の魔法
+   ローディング画面のスタイル
    ============================== */
 
 /* ローディング画面全体 */
@@ -1051,13 +1024,13 @@ footer nav ul li a {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.6); /* 背景を半透明の白にするにゃ */
-  backdrop-filter: blur(8px); /* 背景をぼかす魔法ですにゃ */
+  background-color: rgba(255, 255, 255, 0.6); /* 背景を半透明の白に */
+  backdrop-filter: blur(8px); /* 背景をぼかす */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 9999; /* 何よりも手前に表示するにゃ */
+  z-index: 9999; /* 何よりも手前に表示 */
   transition: opacity 1.2s, visibility 1.2s, backdrop-filter 1.2s,
     background-color 1.2s; /* ゆっくりふわっと消えるための準備 */
 }
@@ -1066,23 +1039,23 @@ footer nav ul li a {
 #loading-screen.loaded {
   opacity: 0; /* 透明にする */
   visibility: hidden; /* 見えなくして、クリックもできなくする */
-  backdrop-filter: blur(0px); /* ぼかしをなくすにゃ */
-  background-color: transparent; /* 背景も完全に透明にするにゃ */
+  backdrop-filter: blur(0px); /* ぼかしをなくす */
+  background-color: transparent; /* 背景も完全に透明にする */
 }
 
-/* ローディング画面のネコちゃんアイコンですにゃ */
+/* ローディング画面のアイコン */
 .loader-icon {
-  font-size: 40px; /* アイコンの大きさを半分にするにゃ */
+  font-size: 40px; /* アイコンの大きさを半分にする */
   color: #f783ac;
-  /* animation: spin 2s linear infinite; */ /* くるくる回るアニメーションは止めるにゃ */
+  /* animation: spin 2s linear infinite; */ /* 回転アニメーションは停止 */
 }
 
-/* ローディング画面のコンテンツをまとめるコンテナですにゃ */
+/* ローディング画面のコンテンツをまとめるコンテナ */
 .loader-container {
   display: flex;
-  flex-direction: column; /* ネコちゃんとバーを縦に並べる魔法ですにゃ */
-  align-items: center; /* 中央にきれいに揃えるにゃ */
-  gap: 15px; /* ネコちゃんとバーの間のすき間を調整するにゃ */
+  flex-direction: column; /* アイコンとバーを縦に並べる */
+  align-items: center; /* 中央に揃える */
+  gap: 15px; /* アイコンとバーの間のすき間を調整 */
 }
 
 .progress-bar-container {
@@ -1102,22 +1075,22 @@ footer nav ul li a {
   transition: width 2s ease-out; /* 2秒かけてにゅーっと伸びる */
 }
 
-/* ローディング中に背景がスクロールしないようにする魔法 */
+/* ローディング中に背景がスクロールしないようにする */
 .loading-active {
   overflow: hidden;
 }
 
 /* ==============================
-   ナビゲーションボタンのネコちゃん
+   ナビゲーションボタンのアイコン
    ============================== */
 
 nav ul li a .fa-cat {
-  margin-right: 8px; /* 文字との間にすき間を作るにゃ */
-  font-size: 0.9em; /* 文字より少しだけ小さくするにゃ */
+  margin-right: 8px; /* 文字との間にすき間を作成 */
+  font-size: 0.9em; /* 文字より少しだけ小さくする */
   transition: transform 0.3s ease-in-out;
 }
 
-/* マウスを乗せるとネコちゃんがぷるんっと震える魔法ですにゃ */
+/* マウスを乗せるとアイコンが震える */
 nav ul li a:hover .fa-cat {
   transform: scale(1.3) rotate(-15deg);
 }

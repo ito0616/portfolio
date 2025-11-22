@@ -22,9 +22,9 @@
     align-items: center; /* 中央に配置 */
   }
 
-  /* --- スマホでの年表デザインの魔法ですにゃ --- */
+  /* --- スマホでの年表デザイン --- */
 
-  /* 中央の線を左端に移動させるにゃ */
+  /* 中央の線を左端に移動 */
   .timeline::before {
     left: 10px;
   }
@@ -47,7 +47,7 @@
     left: 0;
   }
 
-  /* 吹き出しの矢印をすべて左向きにするにゃ */
+  /* 吹き出しの矢印をすべて左向きにする */
   .timeline-item:nth-child(odd) .timeline-content::before,
   .timeline-item:nth-child(even) .timeline-content::before {
     left: -15px;
