@@ -3,8 +3,7 @@ body {
     font-family: 'Noto Sans JP', sans-serif; /* フォント */
     color: #333; /* 文字色 */
     margin: 0; /* ブラウザ標準の余白をリセット */
-    /* 背景にほんのりグラデーションをかける魔法ですにゃ */
-    background: linear-gradient(to bottom, #ffffff, #f7fcff);
+    background-color: #f7fcff; /* サイト全体の基本的な背景色ですにゃ */
     
     /* ページ全体をGridレイアウトにするにゃ */
     display: grid;
@@ -14,6 +13,17 @@ body {
         "footer";
     grid-template-rows: auto 1fr auto; /* headerとfooterは自身の高さ、mainは残りの全て */
     min-height: 100vh; /* ページの最小の高さを画面の高さに */
+}
+
+/* サイト全体の壁紙になる魔法のエリアですにゃん */
+.site-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #ffffff, #f7fcff);
+    z-index: -2; /* 背景の図形よりも、さらに後ろにいく魔法ですにゃ */
 }
 
 
