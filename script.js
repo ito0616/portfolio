@@ -88,17 +88,3 @@ navLinks.forEach(function(link) {
         }
     });
 });
-
-// --- スキルのお星様を光らせる魔法 ---
-// すべてのスキル評価を取得する
-const skillRatings = document.querySelectorAll('.skill-rating');
-
-skillRatings.forEach(function(rating) {
-    // data-rating属性から、お星様の数を取得する
-    const ratingValue = parseInt(rating.dataset.rating, 10);
-    // お星様1つあたりの幅（だいたい18.6pxくらい）を計算して、光らせる幅を決める
-    const ratingWidth = ratingValue * 18.6; 
-
-    // 計算した幅を、CSSの変数（--rating-width）として設定する
-    rating.style.setProperty('--rating-width', `${ratingWidth}px`);
-});

@@ -322,36 +322,12 @@ main {
 
 .skill-rating {
     margin-top: 8px; /* 説明文とお星様の間のスペース */
-    position: relative; /* 金色のお星様を重ねるための基準点にするにゃ */
-    display: inline-block; /* 中身の幅に合わせるにゃ */
 }
 
-/* 空っぽのお星様（下の層）のスタイルですにゃ */
-.skill-rating > i {
-    color: #ccc; /* 空っぽのお星様は薄いグレーにするにゃ */
+.skill-rating .fa-star {
+    color: #ffc107; /* お星様の色をキラキラのゴールドにする */
     margin: 0 1px; /* お星様同士がくっつきすぎないようにする */
     font-size: 1.1rem; /* お星様の大きさを調整 */
-}
-
-/* 金色のお星様（上の層）を作る魔法ですにゃ */
-.skill-rating::before {
-    content: '★★★★★'; /* お星様を5つ並べるにゃ */
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: #ffc107; /* キラキラのゴールドですにゃ */
-    overflow: hidden; /* はみ出した部分を隠す魔法ですにゃ */
-    width: 0; /* 最初は隠しておく（幅を0にする）にゃ */
-    transition: width 0.5s ease-in-out; /* 0.5秒かけてにゅーっと現れる魔法ですにゃ */
-    font-family: "Font Awesome 6 Free"; /* Font Awesomeのフォントを使うおまじないですにゃ */
-    font-weight: 900; /* fa-solidと同じ太さにするおまじないですにゃ */
-    letter-spacing: 2.2px; /* お星様の間のスペースを調整するにゃ */
-}
-
-/* スキル全体にマウスを乗せたら、金色のお星様が現れる魔法ですにゃ */
-.skill-item:hover .skill-rating::before {
-    /* JavaScriptで設定した幅（--rating-width）まで、にゅーっと伸びるにゃ */
-    width: var(--rating-width);
 }
 
 /* Worksセクション */
@@ -434,6 +410,21 @@ main {
     padding-left: 0px;
 }
 
+.work-detail .mimi-special-title {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    color: #f783ac;
+    border-bottom-color: #79d2f0;
+}
+
+.work-detail h2 {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 1.8rem;
+    color: #aaa;
+    margin-top: -30px;
+    margin-bottom: 30px;
+    border: none;
+}
+
 .work-detail p {
     text-align: left; /* 左揃えの方が見やすい */
     line-height: 1.9;
@@ -486,10 +477,19 @@ main {
    ============================== */
 
 .animation-playground {
-    margin-top: 50px;
+    margin-top: 30px;
     text-align: center;
-    border-top: 1px dashed #ccc;
-    padding-top: 30px;
+    border: 2px dashed #f783ac;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 30px;
+}
+
+.animation-playground h3 {
+    color: #f783ac;
+    border-bottom: 2px solid #79d2f0;
+    display: inline-block;
 }
 
 .animation-canvas {
@@ -566,6 +566,16 @@ main {
     transform: translateY(-2px); /* 少しだけ浮き上がるにゃ */
 }
 
+.work-detail {
+    /* ミミ特製のかわいいストライプ背景ですにゃ！ */
+    background-image: repeating-linear-gradient(
+        -45deg,
+        #ffffff,
+        #ffffff 20px,
+        #fff0f5 20px,
+        #fff0f5 40px
+    );
+}
 .animation-playground p {
     text-align: center;
     padding: 0;
