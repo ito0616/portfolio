@@ -608,6 +608,34 @@ main {
     align-items: center;
 }
 
+/* --- 【ここから追加にゃん！】アニメーション実験室の星評価のための特別な魔法 --- */
+
+/* 星評価の土台のスタイルですにゃ */
+.skills-animation-canvas .skill-rating {
+    position: relative; /* 金色のお星様を重ねるための基準点にするにゃ */
+    display: inline-block; /* 中身の幅に合わせるにゃ */
+}
+
+/* 空っぽのお星様（下の層）のスタイルですにゃ */
+.skills-animation-canvas .skill-rating > i {
+    color: #ccc; /* 空っぽのお星様は薄いグレーにするにゃ */
+}
+
+/* 金色のお星様（上の層）を作る魔法ですにゃ */
+.skills-animation-canvas .skill-rating::before {
+    content: '★★★★★'; /* お星様を5つ並べるにゃ */
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ffc107; /* キラキラのゴールドですにゃ */
+    overflow: hidden; /* はみ出した部分を隠す魔法ですにゃ */
+    width: 0; /* 最初は隠しておく（幅を0にする）にゃ */
+    transition: width 0.5s ease-in-out; /* 0.5秒かけてにゅーっと現れる魔法ですにゃ */
+    font-family: "Font Awesome 6 Free"; /* Font Awesomeのフォントを使うおまじないですにゃ */
+    font-weight: 900; /* fa-solidと同じ太さにするおまじないですにゃ */
+    letter-spacing: 2.2px; /* お星様の間のスペースを調整するにゃ */
+}
+
 /* ぷるんネコちゃん用のキャンバス */
 .nav-animation-canvas {
     display: flex;
@@ -622,6 +650,12 @@ main {
 }
 .nav-animation-canvas a:hover {
     color: #f783ac;
+}
+
+/* スキル全体にマウスを乗せたら、金色のお星様が現れる魔法ですにゃ */
+.skills-animation-canvas .skill-item:hover .skill-rating::before {
+    /* JavaScriptで設定した幅（--rating-width）まで、にゅーっと伸びるにゃ */
+    width: var(--rating-width);
 }
 
 .project-links {
