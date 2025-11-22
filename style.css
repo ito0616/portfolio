@@ -330,62 +330,30 @@ main {
 .work-item a {
     display: block;
     text-decoration: none;
-    color: white; /* タイトルの文字を白にするにゃ */
+    color: #333; /* タイトルの文字を黒にするにゃ */
+    border: 1px solid #ddd; /* 薄いグレーの枠線を追加するにゃ */
     border-radius: 8px;
     overflow: hidden;
     transition: box-shadow 0.3s, transform 0.3s;
-    position: relative; /* タイトルを重ねるための基準点にするにゃ */
 }
 
 .work-item a:hover {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    /* transform: translateY(-5px); */ /* この動きは新しいアニメーションと合わないのでお休みにゃ */
+    transform: translateY(-5px); /* マウスを乗せたらふわっと浮き上がる魔法ですにゃ */
 }
 
-/* マウスを乗せたときに、画像を暗くする黒いフィルターですにゃ */
-.work-item a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.work-item a:hover::before {
-    opacity: 1;
-}
-
-.work-item img {
+.work-item img, .work-image-placeholder {
     width: 300px;
     height: 200px;
     object-fit: cover;
     display: block;
-    transition: transform 0.3s; /* 少しだけズームするアニメーションの準備にゃ */
-}
-
-.work-item a:hover img {
-    transform: scale(1.1); /* マウスを乗せたら画像を少しだけズームするにゃ */
 }
 
 .work-title {
     font-weight: bold;
     padding: 15px;
     text-align: center;
-    background-color: #f9f9f9;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    transform: translateY(100%); /* 最初は画面の下に隠しておく魔法ですにゃ */
-    transition: transform 0.3s ease-out;
-}
-
-.work-item a:hover .work-title {
-    transform: translateY(0); /* マウスを乗せたら、にゅーっと出てくる魔法ですにゃ */
+    background-color: #f9f9f9; /* 背景を薄いグレーにするにゃ */
 }
 
 /* 詳細ページのスタイル */
