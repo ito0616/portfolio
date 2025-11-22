@@ -61,7 +61,6 @@ header nav ul li a:hover {
 /* コンテンツの開始位置下げる */
 main {
     grid-area: main; /* mainエリアに配置 */
-    position: relative; /* 背景の図形たちの基準点になる魔法ですにゃ */
 }
 
 /* ヒーローセクション　*/
@@ -156,24 +155,40 @@ main {
     }
 }
 
-/* ==============================
-   ページ全体の背景の飾り付けの魔法
-   ============================== */
+/* ==================================
+   【新しい！】ページ全体の背景の飾り付けの魔法
+   ================================== */
 
 .background-shapes {
-    position: absolute; /* mainエリアを基準に配置する魔法ですにゃ */
+    position: fixed; /* スクロールしても背景が動かないように固定する魔法ですにゃ */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     overflow: hidden; /* 画面からはみ出した図形を隠すにゃ */
-    z-index: -1; /* すべてのコンテンツの後ろに隠れる魔法ですにゃ */
+    z-index: -1; /* すべてのコンテンツの後ろに隠れる、一番大事な魔法ですにゃ */
 }
 
 .background-shapes .shape {
+    position: absolute;
     opacity: 0; /* 最初は見えないようにするにゃ */
     animation: fly-up 15s linear infinite; /* 15秒かけてふわふわ昇るアニメーションにゃ */
     bottom: -150px; /* 画面の下からスタートするにゃ */
+}
+
+/* 下から上にふわふわ昇るアニメーション本体ですにゃ */
+@keyframes fly-up {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    10%, 90% {
+        opacity: 0.15; /* ほとんどの時間、うっすら見えるようにするにゃ */
+    }
+    100% {
+        transform: translateY(-120vh); /* 画面の上まで昇りきるにゃ */
+        opacity: 0;
+    }
 }
 
 /* 図形ごとに、飛ぶ場所や速さ、大きさを変える魔法ですにゃ */
