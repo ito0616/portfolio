@@ -214,7 +214,7 @@ main {
     justify-content: center; /* 垂直方向の中央揃え */
     align-items: center; /* 水平方向の中央揃え */
 
-    background-color: rgba(255, 255, 255, 0.8); /* 背景を少しだけ透明な白にするにゃ */
+    /* background-color: rgba(255, 255, 255, 0.8); */ /* 背景を少しだけ透明な白にするにゃ */
     color: #333; /* 文字；黒 */
 
     /* テキストのスタイル */
@@ -270,7 +270,7 @@ main {
 
 /* Skillsセクション */
 #skills {
-    background-color: rgba(249, 249, 249, 0.8); /* 背景を少しだけ透明なグレーにするにゃ */
+    /* background-color: rgba(249, 249, 249, 0.8); */ /* 背景を少しだけ透明なグレーにするにゃ */
     text-align: center;
     padding: 80px 20px;
 }
@@ -334,7 +334,7 @@ main {
 #works {
     text-align: center; /* このセクションの中身をすべて中央揃えにする */
     padding: 80px 20px; /* 上下の余白を80px、左右の余白を20pxに */
-    background-color: rgba(249, 249, 249, 0.8); /* 背景を少しだけ透明なグレーにするにゃ */
+    /* background-color: rgba(249, 249, 249, 0.8); */ /* 背景を少しだけ透明なグレーにするにゃ */
 }
 
 #works h2 {
@@ -767,7 +767,7 @@ footer nav ul li a {
    ============================== */
 
 #career {
-    background-color: rgba(255, 255, 255, 0.8); /* 背景を少しだけ透明な白にするにゃ */
+    /* background-color: rgba(255, 255, 255, 0.8); */ /* 背景を少しだけ透明な白にするにゃ */
     padding: 80px 20px;
     text-align: center;
 }
