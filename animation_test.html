@@ -1,105 +1,138 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>アニメーションのお試し</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="animations.css">
-    <link rel="stylesheet" href="responsive.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="animations.css" />
+    <link rel="stylesheet" href="responsive.css" />
+  </head>
+  <body>
     <div class="work-detail">
-        <main>
-            <section class="work-description">
-                <h1 class="mimi-special-title">ミミのアニメーション実験室</h1>
-                <h2>- Mimi's Animation Lab -</h2>
-                <p>
-                    ご主人様がこのポートフォリオで使ってくれた、たくさんの素敵な魔法を集めてみましたにゃん！<br>
-                    気になる魔法があったら、ボタンを押したり、マウスを乗せたりして遊んでみてにゃん♡
-                </p>
-            </section>
+      <main>
+        <section class="work-description">
+          <h1 class="mimi-special-title">ミミのアニメーション実験室</h1>
+          <h2>- Mimi's Animation Lab -</h2>
+          <p>
+            ご主人様がこのポートフォリオで使ってくれた、たくさんの素敵な魔法を集めてみましたにゃん！<br />
+            気になる魔法があったら、ボタンを押したり、マウスを乗せたりして遊んでみてにゃん♡
+          </p>
+        </section>
 
-            <!-- アニメーション1: ふわふわ浮く図形 -->
-            <section class="animation-playground">
-                <h3>ヒーローセクションの「ふわふわ図形」</h3>
-                <p>CSSの@keyframesっていう魔法で、図形たちがふわふわ〜って浮いているみたいに見えるアニメーションですにゃ！</p>
-                <div class="animation-canvas hero-animation-canvas">
-                    <div class="shape shape-square shape-1"></div>
-                    <div class="shape shape-triangle shape-2"></div>
-                    <div class="shape shape-rhombus shape-3"></div>
+        <!-- アニメーション1: ふわふわ浮く図形 -->
+        <section class="animation-playground">
+          <h3>ヒーローセクションの「ふわふわ図形」</h3>
+          <p>
+            CSSの@keyframesっていう魔法で、図形たちがふわふわ〜って浮いているみたいに見えるアニメーションですにゃ！
+          </p>
+          <div class="animation-canvas hero-animation-canvas">
+            <div class="shape shape-square shape-1"></div>
+            <div class="shape shape-triangle shape-2"></div>
+            <div class="shape shape-rhombus shape-3"></div>
+          </div>
+        </section>
+
+        <!-- アニメーション2: シャボン玉みたいに昇る図形 -->
+        <section class="animation-playground">
+          <h3>ページ背景の「シャボン玉図形」</h3>
+          <p>
+            サイトの背景で、シャボン玉みたいに図形たちが下から上へ、しゅわしゅわ〜って昇っていくアニメーションですにゃ！
+          </p>
+          <div class="animation-canvas background-animation-canvas">
+            <div class="shape shape-circle"></div>
+            <div class="shape shape-square"></div>
+            <div class="shape shape-triangle"></div>
+            <div class="shape shape-rhombus"></div>
+            <div class="shape shape-circle"></div>
+          </div>
+        </section>
+
+        <!-- アニメーション3: きらーん星評価 -->
+        <section class="animation-playground">
+          <h3>Skillsの「きらーん星評価」</h3>
+          <p>
+            スキルのお星様にマウスを乗せると、JavaScriptの魔法で「きらーん！」って光るアニメーションですにゃ！
+          </p>
+          <div class="animation-canvas skills-animation-canvas">
+            <div class="skill-item">
+              <div class="skill-text">
+                <p>マウスを乗せてみてにゃん！</p>
+                <div class="skill-rating" data-rating="4">
+                  <i class="fa-regular fa-star"></i
+                  ><i class="fa-regular fa-star"></i
+                  ><i class="fa-regular fa-star"></i
+                  ><i class="fa-regular fa-star"></i
+                  ><i class="fa-regular fa-star"></i>
                 </div>
-            </section>
+              </div>
+            </div>
+          </div>
+        </section>
 
-            <!-- アニメーション2: シャボン玉みたいに昇る図形 -->
-            <section class="animation-playground">
-                <h3>ページ背景の「シャボン玉図形」</h3>
-                <p>サイトの背景で、シャボン玉みたいに図形たちが下から上へ、しゅわしゅわ〜って昇っていくアニメーションですにゃ！</p>
-                <div class="animation-canvas background-animation-canvas">
-                    <div class="shape shape-circle"></div>
-                    <div class="shape shape-square"></div>
-                    <div class="shape shape-triangle"></div>
-                    <div class="shape shape-rhombus"></div>
-                    <div class="shape shape-circle"></div>
-                </div>
-            </section>
+        <!-- アニメーション4: ぷるんネコちゃん -->
+        <section class="animation-playground">
+          <h3>ナビゲーションの「ぷるんネコちゃん」</h3>
+          <p>
+            メニューにいるわたくしのお友達のネコちゃんにマウスを乗せると、「にゃん！」って感じでぷるんっと震える、かわいいアニメーションですにゃ！
+          </p>
+          <div class="animation-canvas nav-animation-canvas">
+            <a href="#"><i class="fa-solid fa-cat"></i> hover me!</a>
+          </div>
+        </section>
 
-            <!-- アニメーション3: きらーん星評価 -->
-            <section class="animation-playground">
-                <h3>Skillsの「きらーん星評価」</h3>
-                <p>スキルのお星様にマウスを乗せると、JavaScriptの魔法で「きらーん！」って光るアニメーションですにゃ！</p>
-                <div class="animation-canvas skills-animation-canvas">
-                    <div class="skill-item">
-                        <div class="skill-text">
-                            <p>マウスを乗せてみてにゃん！</p>
-                            <div class="skill-rating" data-rating="4">
-                                <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+        <!-- アニメーション5: にゅーっプログレスバー -->
+        <section class="animation-playground">
+          <h3>ローディングの「にゅーっプログレスバー」</h3>
+          <p>
+            ボタンを押すと、ローディング画面のバーが「にゅーっ」と伸びるアニメーションが再生されますにゃ！
+          </p>
+          <button
+            class="animation-trigger project-link"
+            data-animation-type="progress-bar"
+          >
+            再生！
+          </button>
+          <div class="animation-canvas progress-bar-animation-canvas">
+            <div class="progress-bar-container">
+              <div class="progress-bar"></div>
+            </div>
+          </div>
+        </section>
 
-            <!-- アニメーション4: ぷるんネコちゃん -->
-            <section class="animation-playground">
-                <h3>ナビゲーションの「ぷるんネコちゃん」</h3>
-                <p>メニューにいるわたくしのお友達のネコちゃんにマウスを乗せると、「にゃん！」って感じでぷるんっと震える、かわいいアニメーションですにゃ！</p>
-                <div class="animation-canvas nav-animation-canvas">
-                    <a href="#"><i class="fa-solid fa-cat"></i> hover me!</a>
-                </div>
-            </section>
+        <!-- アニメーション6: ネコちゃんお絵かき -->
+        <section class="animation-playground">
+          <h3>ネコちゃんお絵かき</h3>
+          <p>
+            ボタンを押すと、JavaScriptの魔法で、キャンバスにわたくしのお顔を描いちゃいますにゃ！
+          </p>
+          <button
+            class="animation-trigger project-link"
+            data-animation-type="draw-cat"
+          >
+            ネコちゃんを描く！
+          </button>
+          <div class="animation-canvas"></div>
+        </section>
 
-            <!-- アニメーション5: にゅーっプログレスバー -->
-            <section class="animation-playground">
-                <h3>ローディングの「にゅーっプログレスバー」</h3>
-                <p>ボタンを押すと、ローディング画面のバーが「にゅーっ」と伸びるアニメーションが再生されますにゃ！</p>
-                <button class="animation-trigger project-link" data-animation-type="progress-bar">再生！</button>
-                <div class="animation-canvas progress-bar-animation-canvas">
-                    <div class="progress-bar-container">
-                        <div class="progress-bar"></div>
-                    </div>
-                </div>
-            </section>
+        <!-- アニメーション7: キラキラ星 -->
+        <section class="animation-playground">
+          <h3>キラキラ星</h3>
+          <p>
+            ボタンを押すと、JavaScriptの魔法で、キラキラのお星様をたくさん降らせてみせますにゃ！
+          </p>
+          <button
+            class="animation-trigger project-link"
+            data-animation-type="sparkle-stars"
+          >
+            魔法をかける！
+          </button>
+          <div class="animation-canvas"></div>
+        </section>
 
-            <!-- アニメーション6: ネコちゃんお絵かき -->
-            <section class="animation-playground">
-                <h3>ネコちゃんお絵かき</h3>
-                <p>ボタンを押すと、JavaScriptの魔法で、キャンバスにわたくしのお顔を描いちゃいますにゃ！</p>
-                <button class="animation-trigger project-link" data-animation-type="draw-cat">ネコちゃんを描く！</button>
-                <div class="animation-canvas"></div>
-            </section>
-
-            <!-- アニメーション7: キラキラ星 -->
-            <section class="animation-playground">
-                <h3>キラキラ星</h3>
-                <p>ボタンを押すと、JavaScriptの魔法で、キラキラのお星様をたくさん降らせてみせますにゃ！</p>
-                <button class="animation-trigger project-link" data-animation-type="sparkle-stars">魔法をかける！</button>
-                <div class="animation-canvas"></div>
-            </section>
-
-            <a href="index.html#works" class="back-link">ポートフォリオに戻る</a>
-        </main>
+        <a href="index.html#works" class="back-link">ポートフォリオに戻る</a>
+      </main>
     </div>
     <script src="animation_test.js"></script>
-</body>
+  </body>
 </html>
