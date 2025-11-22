@@ -169,7 +169,7 @@ main {
     z-index: -1; /* すべてのコンテンツの後ろに隠れる、一番大事な魔法ですにゃ */
 }
 
-.background-shapes .shape {
+.background-shapes .shape, .background-animation-canvas .shape {
     position: absolute;
     opacity: 0; /* 最初は見えないようにするにゃ */
     animation: fly-up 15s linear infinite; /* 15秒かけてふわふわ昇るアニメーションにゃ */
@@ -192,11 +192,11 @@ main {
 }
 
 /* 図形ごとに、飛ぶ場所や速さ、大きさを変える魔法ですにゃ */
-.background-shapes .shape:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 15s; width: 80px; height: 80px; }
-.background-shapes .shape:nth-child(2) { left: 20%; animation-delay: 2s; animation-duration: 12s; width: 30px; height: 30px; }
-.background-shapes .shape:nth-child(3) { left: 25%; animation-delay: 4s; animation-duration: 18s; width: 50px; height: 50px; }
-.background-shapes .shape:nth-child(4) { left: 40%; animation-delay: 0s; animation-duration: 20s; width: 60px; height: 60px; }
-.background-shapes .shape:nth-child(5) { left: 55%; animation-delay: 1s; animation-duration: 14s; width: 20px; height: 20px; }
+.background-shapes .shape:nth-child(1), .background-animation-canvas .shape:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 15s; width: 80px; height: 80px; }
+.background-shapes .shape:nth-child(2), .background-animation-canvas .shape:nth-child(2) { left: 20%; animation-delay: 2s; animation-duration: 12s; width: 30px; height: 30px; }
+.background-shapes .shape:nth-child(3), .background-animation-canvas .shape:nth-child(3) { left: 25%; animation-delay: 4s; animation-duration: 18s; width: 50px; height: 50px; }
+.background-shapes .shape:nth-child(4), .background-animation-canvas .shape:nth-child(4) { left: 40%; animation-delay: 0s; animation-duration: 20s; width: 60px; height: 60px; }
+.background-shapes .shape:nth-child(5), .background-animation-canvas .shape:nth-child(5) { left: 55%; animation-delay: 1s; animation-duration: 14s; width: 20px; height: 20px; }
 .background-shapes .shape:nth-child(6) { left: 65%; animation-delay: 3s; animation-duration: 16s; width: 110px; height: 110px; }
 .background-shapes .shape:nth-child(7) { left: 75%; animation-delay: 7s; animation-duration: 19s; width: 150px; height: 150px; }
 .background-shapes .shape:nth-child(8) { left: 85%; animation-delay: 5s; animation-duration: 13s; width: 40px; height: 40px; }
@@ -486,13 +486,14 @@ main {
    ============================== */
 
 .animation-playground {
-    margin-top: 30px;
+    margin-top: 50px;
     text-align: center;
+    border-top: 1px dashed #ccc;
+    padding-top: 30px;
 }
 
-#animation-canvas {
+.animation-canvas {
     position: relative;
-    width: 100%;
     height: 200px;
     margin-top: 20px;
 }
@@ -563,6 +564,54 @@ main {
 .project-link:hover {
     background-color: #e0749c; /* 少し濃いピンク色 */
     transform: translateY(-2px); /* 少しだけ浮き上がるにゃ */
+}
+
+.animation-playground p {
+    text-align: center;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+/* --- アニメーション実験室の個別スタイル --- */
+
+/* ふわふわ図形用のキャンバス */
+.hero-animation-canvas {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* シャボン玉図形用のキャンバス */
+.background-animation-canvas {
+    background: linear-gradient(to bottom, #ffffff, #f7fcff);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.background-animation-canvas .shape {
+    opacity: 0.15; /* 最初から見えるようにするにゃ */
+}
+
+/* 星評価用のキャンバス */
+.skills-animation-canvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ぷるんネコちゃん用のキャンバス */
+.nav-animation-canvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.nav-animation-canvas a {
+    color: #3b3b3b;
+    text-decoration: none;
+    font-weight: bold;
+}
+.nav-animation-canvas a:hover {
+    color: #f783ac;
 }
 
 .project-links {
@@ -772,14 +821,14 @@ footer nav ul li a {
 
 /* 左側の箱（奇数番目）の矢印を右向きに */
 .timeline-item:nth-child(odd) .timeline-content::before {
-    right: -15px; /* 箱の右側に配置 */
+    right: -18px; /* 箱の右側に配置（少しだけ外にずらすにゃ） */
     border-width: 10px 0 10px 15px;
     border-color: transparent transparent transparent #79d2f0; /* 新しい水色 */
 }
 
 /* 右側の箱（偶数番目）の矢印を左向きに */
 .timeline-item:nth-child(even) .timeline-content::before {
-    left: -15px; /* 箱の左側に配置 */
+    left: -18px; /* 箱の左側に配置（少しだけ外にずらすにゃ） */
     border-width: 10px 15px 10px 0;
     border-color: transparent #79d2f0 transparent transparent; /* 新しい水色 */
 }

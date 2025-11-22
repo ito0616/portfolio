@@ -19,6 +19,8 @@ triggerButtons.forEach(function(button) {
             drawCat(canvas);
         } else if (animationType === 'sparkle-stars') {
             sparkleStars(canvas);
+        } else if (animationType === 'progress-bar') {
+            runProgressBar(canvas);
         }
     });
 });
@@ -58,3 +60,27 @@ function sparkleStars(canvas) {
         canvas.appendChild(star);
     }
 }
+
+// プログレスバーを動かす魔法
+function runProgressBar(canvas) {
+    const progressBar = canvas.querySelector('.progress-bar');
+    // 一度リセットするために、幅を0に戻す
+    progressBar.style.transition = 'none'; // 一瞬だけアニメーションをオフ
+    progressBar.style.width = '0%';
+    // 少しだけ待ってからアニメーションを再開する
+    setTimeout(function() {
+        progressBar.style.transition = 'width 2s ease-out'; // アニメーションをオン
+        progressBar.style.width = '100%';
+    }, 50);
+}
+
+// --- このページにいるスキルのお星様を光らせる魔法 ---
+const skillRatings = document.querySelectorAll('.animation-playground .skill-rating');
+
+skillRatings.forEach(function(rating) {
+    const ratingValue = parseInt(rating.dataset.rating, 10);
+    const ratingWidth = ratingValue * 18.6; 
+
+    // 計算した幅を、CSSの変数（--rating-width）として設定する
+    rating.style.setProperty('--rating-width', `${ratingWidth}px`);
+});
