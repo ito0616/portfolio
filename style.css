@@ -4,14 +4,6 @@ body {
   color: #333; /* 文字色 */
   margin: 0; /* ブラウザ標準の余白をリセット */
   background-color: #f7fcff; /* サイト全体の基本的な背景色ですにゃ */
-  /* ページ全体をGridレイアウトにするにゃ */
-  display: grid;
-  grid-template-areas:
-    "header"
-    "main"
-    "footer";
-  grid-template-rows: auto 1fr auto; /* headerとfooterは自身の高さ、mainは残りの全て */
-  min-height: 100vh; /* ページの最小の高さを画面の高さに */
 }
 
 /* サイト全体の壁紙になる魔法のエリアですにゃん */
@@ -23,6 +15,18 @@ body {
   height: 100%;
   background: linear-gradient(to bottom, #ffffff, #f7fcff);
   z-index: -2; /* 背景の図形よりも、さらに後ろにいく魔法ですにゃ */
+}
+
+/* 新しい親分（ラッパー）の魔法ですにゃん！ */
+.site-wrapper {
+  /* ページ全体をGridレイアウトにするにゃ */
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: auto 1fr auto; /* headerとfooterは自身の高さ、mainは残りの全て */
+  min-height: 100vh; /* ページの最小の高さを画面の高さに */
 }
 
 /*ヘッダー*/
@@ -408,6 +412,12 @@ main {
   height: 80px; /* アイコン画像の高さを揃える */
   object-fit: contain; /* 画像の比率を保ったまま収める */
   flex-shrink: 0; /* アイコンが縮まないようにする */
+  transition: transform 0.3s ease-in-out; /* ぷるんと動くための準備の魔法ですにゃ */
+}
+
+/* スキル全体にマウスを乗せたら、アイコンがぷるんと動く魔法ですにゃ */
+.skill-item:hover .skill-icon {
+  transform: scale(1.05) rotate(-5deg); /* 控えめに、ぷるんっと動かすにゃん！ */
 }
 
 .skill-text {
@@ -481,6 +491,7 @@ main {
   height: 200px;
   object-fit: cover;
   display: block;
+  transition: transform 0.3s ease; /* ぐぐ〜っとズームするための準備の魔法ですにゃ */
 }
 
 .work-title {
@@ -488,6 +499,11 @@ main {
   padding: 15px;
   text-align: center;
   background-color: #f9f9f9; /* 背景を薄いグレーにするにゃ */
+}
+
+/* カードにマウスを乗せたら、中の画像を少しだけ大きくする魔法ですにゃ */
+.work-item a:hover img {
+  transform: scale(1.1); /* 1.1倍に拡大するにゃん！ */
 }
 
 /* 詳細ページのスタイル */
@@ -984,6 +1000,13 @@ footer nav ul li a {
   color: white;
   border-radius: 8px;
   position: relative;
+  transition: transform 0.3s, box-shadow 0.3s; /* ふわっと動くための準備の魔法ですにゃ */
+}
+
+/* 年表の箱にマウスを乗せたら、ふわっと浮き上がらせる魔法ですにゃ */
+.timeline-item:hover .timeline-content {
+  transform: translateY(-3px); /* もっと少しだけ上に動かすにゃ */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12); /* 影も控えめにするにゃ */
 }
 
 /* 吹き出しの矢印部分を作る */
