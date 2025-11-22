@@ -36,6 +36,5 @@
 /* 下から上にふわふわ昇るアニメーション本体ですにゃ */
 @keyframes fly-up {
     0% { transform: translateY(0); opacity: 0; }
-    10%, 90% { opacity: 0.15; }
-    100% { transform: translateY(-120vh); opacity: 0; }
+    10%, 90% { opacity: 0.slateY(-120vh); opacity: 0; }
 }
