@@ -142,19 +142,6 @@ main {
 .shape-6 { width: 60px; height: 60px; top: 80%; left: 5%; animation-delay: -6s; }
 .shape-7 { width: 50px; height: 50px; top: 5%; right: 40%; animation-delay: -7s; }
 
-/* ふわふわさせるアニメーション本体ですにゃ */
-@keyframes float {
-    0% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-40px) rotate(20deg);
-    }
-    100% {
-        transform: translateY(0px) rotate(0deg);
-    }
-}
-
 /* ==================================
    【新しい！】ページ全体の背景の飾り付けの魔法
    ================================== */
@@ -174,21 +161,6 @@ main {
     opacity: 0; /* 最初は見えないようにするにゃ */
     animation: fly-up 15s linear infinite; /* 15秒かけてふわふわ昇るアニメーションにゃ */
     bottom: -150px; /* 画面の下からスタートするにゃ */
-}
-
-/* 下から上にふわふわ昇るアニメーション本体ですにゃ */
-@keyframes fly-up {
-    0% {
-        transform: translateY(0);
-        opacity: 0;
-    }
-    10%, 90% {
-        opacity: 0.15; /* ほとんどの時間、うっすら見えるようにするにゃ */
-    }
-    100% {
-        transform: translateY(-120vh); /* 画面の上まで昇りきるにゃ */
-        opacity: 0;
-    }
 }
 
 /* 図形ごとに、飛ぶ場所や速さ、大きさを変える魔法ですにゃ */
@@ -358,16 +330,33 @@ main {
 .work-item a {
     display: block;
     text-decoration: none;
-    color: #333;
-    border: 1px solid #ddd;
+    color: white; /* タイトルの文字を白にするにゃ */
     border-radius: 8px;
     overflow: hidden;
     transition: box-shadow 0.3s, transform 0.3s;
+    position: relative; /* タイトルを重ねるための基準点にするにゃ */
 }
 
 .work-item a:hover {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transform: translateY(-5px);
+    /* transform: translateY(-5px); */ /* この動きは新しいアニメーションと合わないのでお休みにゃ */
+}
+
+/* マウスを乗せたときに、画像を暗くする黒いフィルターですにゃ */
+.work-item a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.work-item a:hover::before {
+    opacity: 1;
 }
 
 .work-item img {
@@ -375,6 +364,11 @@ main {
     height: 200px;
     object-fit: cover;
     display: block;
+    transition: transform 0.3s; /* 少しだけズームするアニメーションの準備にゃ */
+}
+
+.work-item a:hover img {
+    transform: scale(1.1); /* マウスを乗せたら画像を少しだけズームするにゃ */
 }
 
 .work-title {
@@ -382,6 +376,16 @@ main {
     padding: 15px;
     text-align: center;
     background-color: #f9f9f9;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(100%); /* 最初は画面の下に隠しておく魔法ですにゃ */
+    transition: transform 0.3s ease-out;
+}
+
+.work-item a:hover .work-title {
+    transform: translateY(0); /* マウスを乗せたら、にゅーっと出てくる魔法ですにゃ */
 }
 
 /* 詳細ページのスタイル */
@@ -926,12 +930,6 @@ footer nav ul li a {
     flex-direction: column; /* ネコちゃんとバーを縦に並べる魔法ですにゃ */
     align-items: center; /* 中央にきれいに揃えるにゃ */
     gap: 15px; /* ネコちゃんとバーの間のすき間を調整するにゃ */
-}
-
-/* くるくる回すためのアニメーション本体ですにゃ */
-@keyframes spin {
-    0% { transform: rotate(0deg); } 
-    100% { transform: rotate(360deg); } 
 }
 
 .progress-bar-container {

@@ -88,3 +88,29 @@ navLinks.forEach(function(link) {
         }
     });
 });
+
+// --- トップへ戻るボタンの魔法 ---
+const backToTopBtn = document.getElementById('back-to-top-btn');
+
+// ページがスクロールされたら、この中の処理を実行する
+window.addEventListener('scroll', function() {
+    // 画面の高さの半分くらいスクロールされたら
+    if (window.scrollY > window.innerHeight / 2) {
+        // ボタンに 'visible' クラスを追加して表示させる
+        backToTopBtn.classList.add('visible');
+    } else {
+        // それ以外は 'visible' クラスを削除して隠す
+        backToTopBtn.classList.remove('visible');
+    }
+});
+
+// ボタンがクリックされたら、この中の処理を実行する
+backToTopBtn.addEventListener('click', function(e) {
+    // リンクのデフォルトの動き（#にジャンプする）を止める
+    e.preventDefault();
+    // ページのてっぺんまで、するする〜っとスクロールする
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
