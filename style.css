@@ -4,7 +4,6 @@ body {
   color: #333; /* 文字色 */
   margin: 0; /* ブラウザ標準の余白をリセット */
   background-color: #f7fcff; /* サイト全体の基本的な背景色ですにゃ */
-
   /* ページ全体をGridレイアウトにするにゃ */
   display: grid;
   grid-template-areas:
@@ -517,13 +516,15 @@ main {
   padding-left: 0px;
 }
 
-.work-detail .mimi-special-title {
+/* アニメーション実験室だけの特別なタイトルですにゃ */
+.animation-lab-page .mimi-special-title {
   font-family: "Zen Maru Gothic", sans-serif;
   color: #f783ac;
   border-bottom-color: #79d2f0;
 }
 
-.work-detail h2 {
+/* アニメーション実験室だけの特別なサブタイトルですにゃ */
+.animation-lab-page .work-detail h2 {
   font-family: "Zen Maru Gothic", sans-serif;
   font-size: 1.8rem;
   color: #aaa;
@@ -549,6 +550,8 @@ main {
   margin: 0;
   flex: 1; /* 空きスペースを均等に分け合う */
   min-width: 200px; /* 最小幅を指定して、小さくなりすぎないようにする */
+  overflow: hidden; /* 拡大した画像がはみ出さないようにする魔法ですにゃ */
+  border-radius: 4px; /* 角を丸くして、画像と合わせるにゃ */
 }
 
 .work-detail .work-images img {
@@ -558,6 +561,12 @@ main {
   border: 1px solid #ddd;
   border-radius: 4px;
   background-color: #f9f9f9; /* 画像の背景を少し色付けする */
+  transition: transform 0.3s ease; /* 0.3秒かけてふわっと変化する魔法ですにゃ */
+}
+
+/* figureタグにマウスを乗せたら、中のimgを少しだけ大きくする魔法ですにゃ */
+.work-detail .work-images figure:hover img {
+  transform: scale(1.1); /* 1.1倍に拡大するにゃん！ */
 }
 
 .back-link {
@@ -683,8 +692,8 @@ main {
   transform: translateY(-2px); /* 少しだけ浮き上がるにゃ */
 }
 
-.work-detail {
-  /* ミミ特製のかわいいストライプ背景ですにゃ！ */
+/* アニメーション実験室だけの、ミミ特製のかわいいストライプ背景ですにゃ！ */
+.animation-lab-page .work-detail {
   background-image: repeating-linear-gradient(
     -45deg,
     #ffffff,
@@ -693,7 +702,8 @@ main {
     #fff0f5 40px
   );
 }
-.animation-playground p {
+
+.animation-lab-page .animation-playground p {
   text-align: center;
   padding: 0;
   margin-bottom: 15px;
